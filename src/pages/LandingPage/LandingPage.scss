@@ -1,0 +1,43 @@
+.landing {
+  background: rgb(2, 78, 3);
+  background: linear-gradient(
+    00deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(17, 66, 39) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  text-align: center;
+  color: white;
+  &__anim {
+    width: 300px;
+  }
+  &__header {
+    font-size: 1.75em;
+    position: relative;
+    top: -2rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__bubble {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 2rem;
+    left: 1rem;
+  }
+  &__bubble-text {
+    font-size: 1em;
+    position: relative;
+    top: -4rem;
+    left: 1rem;
+  }
+  &__image {
+    width: 200px;
+  }
+  &__body {
+    font-size: 0.75em;
+    padding: 1rem 0;
+  }
+}

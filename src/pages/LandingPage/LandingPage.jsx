@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Kaya from "../../assets/images/kaya.png";
+import Bubble from "../../assets/icons/speech-bubble.png";
+import "./LandingPage.scss";
 
 function LandingPage() {
   const frames = import.meta.glob(
@@ -37,17 +40,25 @@ function LandingPage() {
   }, [playCount]);
 
   return (
-    <div>
-      <div style={{ width: "200px", height: "auto" }}>
-        <img
-          src={frameArray[frameIndex]}
-          alt="Swimming Salmon"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
-      <h1>St̓át̓imcets í7wa7 Kayá</h1>
-      <h3>St̓át̓imcets with Kayá</h3>
-      <p>Learn St̓át̓imcets with Kayá! Fun lessons, games, and more!</p>
+    <div className="landing">
+      <img
+        src={frameArray[frameIndex]}
+        alt="Swimming Salmon"
+        className="landing__anim"
+      />
+      <h1 className="landing__header">St̓át̓imcets with Kaya</h1>
+      <section className="landing__container">
+        <div className="landing__bubble-container">
+          <img className="landing__bubble" src={Bubble} alt="Speech bubble" />
+          <p className="landing__bubble-text">
+            K̓alhwá7acw Kaya <br /> nskwátsitsa
+          </p>
+        </div>
+        <img className="landing__image" src={Kaya} alt="Kaya Waving" />
+      </section>
+      <p className="landing__body">
+        Learn St̓át̓imcets with Kayá! Fun lessons, games, and more!
+      </p>
     </div>
   );
 }
