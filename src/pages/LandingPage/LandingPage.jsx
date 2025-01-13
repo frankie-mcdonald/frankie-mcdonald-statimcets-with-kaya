@@ -47,17 +47,20 @@ function LandingPage() {
         className="landing__anim"
       />
       <h1 className="landing__header">St̓át̓imcets with Kaya</h1>
+      <button className="landing__button">Click to learn!!!</button>
       <section className="landing__container">
         <div className="landing__bubble-container">
           <img className="landing__bubble" src={Bubble} alt="Speech bubble" />
           <p className="landing__bubble-text">
-            K̓alhwá7acw Kaya <br /> nskwátsitsa
+            {" "}
+            <span></span>
           </p>
         </div>
         <img className="landing__image" src={Kaya} alt="Kaya Waving" />
       </section>
       <p className="landing__body">
-        Learn St̓át̓imcets with Kayá! Fun lessons, games, and more!
+        Learn St̓át̓imcets with Kayá! Fun lessons, games, and more! K̓alhwá7acw
+        Kaya nskwátsitsa!
       </p>
     </div>
   );
