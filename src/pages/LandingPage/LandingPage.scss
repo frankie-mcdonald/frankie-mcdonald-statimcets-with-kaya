@@ -6,16 +6,15 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+
+  // overflow: hidden;
+  @include desktop {
+    height: 120%;
+  }
 }
 
 body {
-  background: linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgb(17, 66, 39) 85%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background-image: url("../../assets/images/underwater.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,74 +31,67 @@ body {
 
   &__anim {
     width: 80%;
-    @include desktop {
-      width: 30%;
-      position: relative;
-      top: 2rem;
-    }
-  }
-
-  &__hero {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     @include tablet {
       width: 50%;
     }
     @include desktop {
-      width: 100%;
-      height: 200px;
-      flex-direction: row;
-      align-items: center;
+      display: none;
+      // width: 30%;
+      // position: relative;
+      // top: 30rem;
+      // right: -10rem;
+    }
+  }
+
+  &__hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+      height: 80px;
+      // flex-direction: row;
+      // align-items: flex-end;
     }
   }
 
   &__header {
-    font-size: 2em;
+    font-size: 2rem;
     position: relative;
     top: -2rem;
     color: white;
-    -webkit-text-stroke: 0.3vw rgb(0, 0, 0);
-    -webkit-text-stroke: 0.1rem black;
-
     @include tablet {
-      font-size: 3em;
+      font-size: 4rem;
     }
     @include desktop {
-      font-size: 5em;
-      top: 0;
+      top: 4rem;
+      font-size: 6rem;
     }
   }
 
   &__button {
-    transform: scale(1.5);
-    padding: 5px 10px;
+    padding: 5px 30px;
     margin-bottom: 1rem;
-    border: 2px solid #fff;
+    border: 2px solid #334a38;
     color: #ffffff;
-    background-color: #064813;
-    -webkit-text-stroke: 1px rgb(5, 12, 12);
-
+    background-color: #032b0b;
+    -webkit-text-stroke: 0.5px rgb(5, 12, 12);
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
     position: relative;
     z-index: 2;
     border-radius: 50px;
-    width: 50vw;
-    height: 40px;
     animation: buttonPop 1.5s ease-out forwards;
-
     @include tablet {
-      font-size: 30px;
-      height: 70px;
-      width: 40vw;
+      padding: 20px 100px;
+      font-size: 2rem;
+      margin-top: 4rem;
     }
     @include desktop {
-      width: 30vw;
+      font-size: 3rem;
+      margin-top: 10rem;
     }
   }
 
@@ -107,12 +99,12 @@ body {
     content: "";
     background: linear-gradient(
       45deg,
-      #1a5319,
+      #080e0c,
+      #242e25,
+      #334a38,
       #508d4e,
-      #366608,
-      #508d4e,
-      #1a5319,
-      #508d4e,
+      #289580,
+      #31ba9f,
       #2b452c,
       #121f05
     );
@@ -136,46 +128,19 @@ body {
     width: 100vw;
   }
 
-  &__bubble-container {
-    animation: fadeIn 3s ease-in;
-  }
-
-  &__bubble {
-    width: 120px;
-    height: 120px;
-    position: relative;
-    top: 2rem;
-    left: 1rem;
-
+  &__text {
+    font-size: 1.5rem;
     @include tablet {
-      width: 240px;
-      height: 240px;
+      font-size: 3rem;
     }
-  }
-
-  &__bubble-text {
-    width: 100px;
-    font-size: 12px;
-    position: relative;
-    top: -3.1rem;
-    left: 1.5rem;
-
-    @include tablet {
-      font-size: 30px;
-      width: 200px;
-      top: -9rem;
-      left: 2.5rem;
+    @include desktop {
+      font-size: 3rem;
+      margin-top: 1rem;
     }
-
-    span {
-      position: relative;
-    }
-
     &::before {
       content: "K̓alhwá7acw Kaya nskwátsitsa!";
       animation: words 5s infinite;
     }
-
     &::after {
       content: "";
       position: absolute;
@@ -189,21 +154,12 @@ body {
   &__image {
     width: 200px;
     animation: moveUpDown 2s ease-in-out;
-
     @include tablet {
-      width: 250px;
+      width: 300px;
     }
-  }
-
-  &__body {
-    font-size: 0.75em;
-    padding: 0.5rem 0;
-    background-color: #000000;
-    width: 100vw;
-
-    @include tablet {
-      padding: 3rem 0;
-      font-size: 1.5em;
+    @include desktop {
+      width: 300px;
+      position: relative;
     }
   }
 
@@ -211,7 +167,17 @@ body {
     margin-top: auto;
     max-width: 100%;
     overflow: hidden;
-    padding: 0 2rem;
+  }
+  &__body {
+    font-size: 0.75em;
+    padding: 0.5rem 0;
+    background-color: #000000;
+    width: 100vw;
+
+    @include tablet {
+      padding: 1rem 0;
+      font-size: 1.5em;
+    }
   }
 }
 

@@ -52,19 +52,15 @@ function LandingPage() {
       </section>
       <button className="landing__button">Click to learn!!!</button>
       <footer className="landing__footer">
-        <section className="landing__intro-container">
-          <div className="landing__bubble-container">
-            <img className="landing__bubble" src={Bubble} alt="Speech bubble" />
-            <p className="landing__bubble-text">
-              {" "}
-              <span></span>
-            </p>
-          </div>
+        <div className="landing__image-div">
+          <p className="landing__text">
+            <span></span>
+          </p>
           <img className="landing__image" src={Kaya} alt="Kaya Waving" />
-        </section>
+        </div>
+
         <p className="landing__body">
-          Learn St̓át̓imcets with Kayá! Fun lessons, games, and more! K̓alhwá7acw
-          Kaya nskwátsitsa!
+          Learn St̓át̓imcets with Kayá! Fun lessons, games, and more!
         </p>
       </footer>
     </div>
