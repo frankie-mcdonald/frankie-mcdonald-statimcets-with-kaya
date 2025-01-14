@@ -1,0 +1,247 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  @include desktop {
+    height: 120%;
+  }
+}
+
+body {
+  background: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
+    url("../../assets/images/underwater.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // min-height: 100%;
+}
+
+.landing {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+
+  &__anim {
+    width: 80%;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      display: none;
+      // width: 30%;
+      // position: relative;
+      // top: 30rem;
+      // right: -10rem;
+    }
+  }
+
+  &__hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+      height: 10px;
+      // flex-direction: row;
+      // align-items: flex-end;
+    }
+  }
+
+  &__header {
+    font-size: 2rem;
+    position: relative;
+    top: -2rem;
+    color: white;
+    @include tablet {
+      font-size: 4rem;
+    }
+    @include desktop {
+      top: 4rem;
+      font-size: 5rem;
+    }
+  }
+
+  &__button {
+    padding: 5px 30px;
+    margin-bottom: 1rem;
+    border: 2px solid #334a38;
+    color: #ffffff;
+    background-color: #032b0b;
+    -webkit-text-stroke: 0.5px rgb(5, 12, 12);
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    border-radius: 50px;
+    animation: buttonPop 1.5s ease-out forwards;
+    @include tablet {
+      padding: 20px 100px;
+      font-size: 1.5rem;
+      margin-top: 4rem;
+    }
+    @include desktop {
+      margin-top: 15rem;
+    }
+  }
+
+  &__button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #080e0c,
+      #242e25,
+      #334a38,
+      #508d4e,
+      #376336,
+      #13443a,
+      #2b452c,
+      #121f05
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 1000%;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 5px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+    opacity: 1;
+  }
+
+  &__intro-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+    &::before {
+      content: "K̓alhwá7acw Kaya nskwátsitsa!";
+      animation: words 5s infinite;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% + 8px);
+      height: 100%;
+      right: 8px;
+      animation: typing 5s steps(14) infinite;
+    }
+  }
+
+  &__image {
+    width: 200px;
+    animation: moveUpDown 2s ease-in-out;
+    @include tablet {
+      width: 300px;
+    }
+    @include desktop {
+      width: 300px;
+      position: relative;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    width: 100%;
+    // overflow: hidden;
+  }
+  &__body {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    background-color: #000000;
+    width: 100vw;
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+      position: relative;
+      // top: -2rem;
+      padding: 2rem 0;
+    }
+  }
+}
+
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes words {
+  0%,
+  50% {
+    content: "K̓alhwá7acw Kaya nskwátsitsa!";
+  }
+  51%,
+  100% {
+    content: "Hello, my name is Kaya!";
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
