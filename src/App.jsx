@@ -1,13 +1,14 @@
 import "./App.scss";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import KayaLogo from "./components/KayaLogo/KayaLogo";
+import NumbersPage from "./pages/NumbersPage/NumbersPage";
 
 function App() {
   return (
     <>
-      {/* <h1>St'at'imcets with Kaya</h1> */}
       {/* <KayaLogo /> */}
-      <LandingPage />
+      <NumbersPage />
+      {/* <LandingPage /> */}
     </>
   );
 }

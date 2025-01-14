@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Kaya from "../../assets/images/kaya.png";
-import Bubble from "../../assets/icons/speech-bubble.png";
 import "./LandingPage.scss";
 
 function LandingPage() {
