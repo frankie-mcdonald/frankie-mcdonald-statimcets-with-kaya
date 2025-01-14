@@ -36,10 +36,6 @@ body {
     }
     @include desktop {
       display: none;
-      // width: 30%;
-      // position: relative;
-      // top: 30rem;
-      // right: -10rem;
     }
   }
 
@@ -50,11 +46,8 @@ body {
     align-items: center;
     @include desktop {
       height: 10px;
-      // flex-direction: row;
-      // align-items: flex-end;
     }
   }
-
   &__header {
     font-size: 2rem;
     position: relative;
@@ -68,7 +61,6 @@ body {
       font-size: 5rem;
     }
   }
-
   &__button {
     padding: 5px 30px;
     margin-bottom: 1rem;
@@ -93,7 +85,6 @@ body {
       margin-top: 15rem;
     }
   }
-
   &__button::before {
     content: "";
     background: linear-gradient(
@@ -120,13 +111,11 @@ body {
     border-radius: 50px;
     opacity: 1;
   }
-
   &__intro-container {
     display: flex;
     justify-content: center;
     width: 100vw;
   }
-
   &__text {
     font-size: 1.5rem;
     @include tablet {
@@ -149,7 +138,6 @@ body {
       animation: typing 5s steps(14) infinite;
     }
   }
-
   &__image {
     width: 200px;
     animation: moveUpDown 2s ease-in-out;
@@ -161,11 +149,9 @@ body {
       position: relative;
     }
   }
-
   &__footer {
     margin-top: auto;
     width: 100%;
-    // overflow: hidden;
   }
   &__body {
     font-size: 1rem;
@@ -180,7 +166,6 @@ body {
     @include desktop {
       font-size: 2rem;
       position: relative;
-      // top: -2rem;
       padding: 2rem 0;
     }
   }
