@@ -50,7 +50,7 @@ function LandingPage() {
         />
         <h1 className="landing__header">St̓át̓imcets with Kaya</h1>
       </section>
-      <NavLink to={"/dashboard"}>
+      <NavLink to={"/main"}>
         <button className="landing__button">Click to learn!!!</button>
       </NavLink>
 
