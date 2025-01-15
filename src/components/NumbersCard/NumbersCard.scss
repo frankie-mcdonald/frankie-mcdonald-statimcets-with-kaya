@@ -3,17 +3,53 @@
 
 .number-card {
   text-align: center;
-  margin-top: 2rem;
-  cursor: pointer;
-
-  @include flex-box($flex-direction: column, $align-items: center);
+  @include reset;
+  &__div {
+    @include flex-box($flex-direction: column, $align-items: center);
+    cursor: pointer;
+  }
+  &__title {
+    font-size: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
+      url("../../assets/images/into_the_water.jpg");
+    width: 100vw;
+    color: $primary-white;
+    border-top: $dark-turquoise 5px solid;
+    -webkit-text-stroke: 0.5px rgb(72, 81, 81);
+    @include tablet {
+      font-size: 4rem;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__body {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 2rem;
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
   &__image {
     width: 350px;
     border-radius: 50px;
     border: $primary-white 3px solid;
-    margin-top: 4.5rem;
+    margin-top: 2.2rem;
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    @include tablet {
+      width: 600px;
+    }
+    @include desktop {
+      width: 350px;
+      margin: 2rem;
+    }
     &:active {
       box-shadow: 0 5px #666;
       transform: translateY(3px) translateX(3px);
@@ -24,19 +60,25 @@
     position: relative;
     top: -6rem;
     right: -3rem;
+    @include tablet {
+      width: 70px;
+      right: -6rem;
+      top: -8rem;
+    }
+    @include desktop {
+      width: 40px;
+      right: -5rem;
+      top: -7rem;
+    }
     &:active {
       transform: translateY(3px) translateX(3px);
     }
   }
-  &__title {
-    font-size: 4rem;
-    background-color: black;
-    width: 100vw;
-    border: white 1px solid;
-  }
-  &__body {
-    font-size: 0.75rem;
-    text-align: center;
-    margin: 2rem 0;
+}
+.numbers__cards {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
