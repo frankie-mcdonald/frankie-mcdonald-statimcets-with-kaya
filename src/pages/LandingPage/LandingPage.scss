@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
 }
 
 .landing {
@@ -15,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
+  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -130,7 +129,6 @@ body {
       content: "";
       position: absolute;
       width: calc(100% + 8px);
-      height: 100%;
       right: 8px;
       animation: typing 5s steps(14) infinite;
     }

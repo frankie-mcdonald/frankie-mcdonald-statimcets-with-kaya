@@ -1,14 +1,18 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import KayaLogo from "./components/KayaLogo/KayaLogo";
 import NumbersPage from "./pages/NumbersPage/NumbersPage";
-
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
 function App() {
   return (
     <>
-      {/* <KayaLogo /> */}
-      <NumbersPage />
-      {/* <LandingPage /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/numbers" element={<NumbersPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

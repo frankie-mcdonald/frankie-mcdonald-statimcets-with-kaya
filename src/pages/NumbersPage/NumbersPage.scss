@@ -1,7 +1,19 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.numbers {
+  @include flex-box(
+    $flex-direction: column,
+    $align-items: center,
+    $justify-content: center
+  );
+
+  background-color: #081508;
+  color: $primary-white;
+}
 .numbers-hero {
+  border-bottom: $primary-white 3px solid;
+
   background-image: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
     url("../../assets/images/underwater.jpg");
   background-position: center;

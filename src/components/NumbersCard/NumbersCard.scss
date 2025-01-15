@@ -1,7 +1,20 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .number-card {
   width: 100vw;
+  text-align: center;
+  margin-top: 2rem;
+  @include flex-box($flex-direction: column, $align-items: center);
   &__image {
     width: 400px;
-    border-radius: 40px;
+    border-radius: 50px;
+    border: $primary-white 3px solid;
+  }
+  &__icon {
+    width: 50px;
+    position: relative;
+    top: -8rem;
+    right: -4rem;
   }
 }
