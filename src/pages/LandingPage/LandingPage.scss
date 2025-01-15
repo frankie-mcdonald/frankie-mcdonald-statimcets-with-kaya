@@ -6,33 +6,26 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
-  @include desktop {
-    height: 120%;
-  }
 }
 
-body {
+.landing {
   background: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
     url("../../assets/images/underwater.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // min-height: 100%;
-}
-
-.landing {
+  // overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  color: white;
+  color: $primary-white;
 
   &__anim {
     width: 80%;
     @include tablet {
-      width: 50%;
+      width: 500px;
     }
     @include desktop {
       display: none;
@@ -44,6 +37,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      height: 300px;
+    }
     @include desktop {
       height: 10px;
     }
@@ -52,7 +48,7 @@ body {
     font-size: 2rem;
     position: relative;
     top: -2rem;
-    color: white;
+    color: $primary-white;
     @include tablet {
       font-size: 4rem;
     }
@@ -65,8 +61,8 @@ body {
     padding: 5px 30px;
     margin-bottom: 1rem;
     border: 2px solid #334a38;
-    color: #ffffff;
-    background-color: #032b0b;
+    color: $primary-white;
+    background-color: $darkest-green;
     -webkit-text-stroke: 0.5px rgb(5, 12, 12);
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
@@ -89,14 +85,14 @@ body {
     content: "";
     background: linear-gradient(
       45deg,
-      #080e0c,
-      #242e25,
-      #334a38,
-      #508d4e,
-      #376336,
-      #13443a,
-      #2b452c,
-      #121f05
+      $primary-black,
+      $dark-forest-green,
+      $mid-forest-green,
+      $light-green,
+      $green,
+      $dark-turquoise,
+      $mid-forest-green,
+      $darkest-green
     );
     position: absolute;
     top: -2px;
@@ -133,7 +129,6 @@ body {
       content: "";
       position: absolute;
       width: calc(100% + 8px);
-      height: 100%;
       right: 8px;
       animation: typing 5s steps(14) infinite;
     }
@@ -156,7 +151,7 @@ body {
   &__body {
     font-size: 1rem;
     padding: 0.5rem 0;
-    background-color: #000000;
+    background-color: $primary-black;
     width: 100vw;
     @include tablet {
       font-size: 1.5rem;
@@ -165,8 +160,7 @@ body {
 
     @include desktop {
       font-size: 2rem;
-      position: relative;
-      padding: 2rem 0;
+      padding: 4rem 0;
     }
   }
 }
@@ -227,6 +221,6 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(5px);
+    transform: translateY(2px);
   }
 }

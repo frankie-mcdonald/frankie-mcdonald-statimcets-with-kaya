@@ -11,3 +11,30 @@
     @content;
   }
 }
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+@mixin flex-box(
+  $justify-content: none,
+  $align-items: none,
+  $wrap: nowrap,
+  $flex-direction: row
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  flex-direction: $flex-direction;
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
