@@ -6,7 +6,7 @@ import Volume from "../../assets/icons/volume.png";
 
 function NumbersCard() {
   const baseURL = import.meta.env.VITE_API_URL;
-  console.log("BASE URL", baseURL);
+  // console.log("BASE URL", baseURL);
 
   const [numbers, setNumbers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +16,6 @@ function NumbersCard() {
       try {
         const response = await axios.get(`${baseURL}/numbers`);
         setNumbers(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error("Error fetching numbers:", error);
       } finally {
@@ -29,18 +28,35 @@ function NumbersCard() {
   if (isLoading) {
     return <p>Loading numbers...</p>;
   }
+  const playAudio = (audioUrl) => {
+    const fullUrl = audioUrl.startsWith("http")
+      ? audioUrl
+      : `${baseURL}${audioUrl}`;
+    const audio = new Audio(fullUrl);
+
+    audio.play().catch((error) => {
+      console.error("Error playing audio:", error);
+    });
+  };
   return (
     <ul>
+      <h4 className="number-card__body">
+        Click images to hear pronunciation of each word!
+      </h4>
       {numbers.map((number) => (
-        <figure key={number.id} className="number-card">
+        <li
+          key={number.id}
+          onClick={() => playAudio(number.audio)}
+          className="number-card"
+        >
+          <h3 className="number-card__title">{number.translation}</h3>
           <img
             className="number-card__image"
             src={`${baseURL}${number.image}`}
             alt=""
           />
-          <h1>{number.translation}</h1>
           <img className="number-card__icon" src={Volume} alt="" />
-        </figure>
+        </li>
       ))}
     </ul>
   );

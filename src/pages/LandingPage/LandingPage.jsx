@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Kaya from "../../assets/images/kaya.png";
 import "./LandingPage.scss";
 
@@ -49,7 +50,10 @@ function LandingPage() {
         />
         <h1 className="landing__header">St̓át̓imcets with Kaya</h1>
       </section>
-      <button className="landing__button">Click to learn!!!</button>
+      <NavLink to={"/dashboard"}>
+        <button className="landing__button">Click to learn!!!</button>
+      </NavLink>
+
       <footer className="landing__footer">
         <div className="landing__image-div">
           <p className="landing__text">
