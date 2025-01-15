@@ -21,7 +21,7 @@
     @include tablet {
       font-size: 4rem;
     }
-    @include tablet {
+    @include desktop {
       display: none;
     }
   }
