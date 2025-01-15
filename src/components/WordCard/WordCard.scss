@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.word {
+  background-color: $dark-forest-green;
+  padding: 2rem 0;
+  @include flex-center($direction: column);
+  color: white;
+  &__heading {
+    font-size: 50px;
+    padding: 1rem 0;
+  }
+  &__button {
+    color: $primary-black;
+    width: 300px;
+    border: $dark-turquoise solid 4px;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: $primary-white;
+  }
+  &__body {
+    padding: 1rem 0;
+  }
+}

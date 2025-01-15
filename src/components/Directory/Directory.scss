@@ -1,26 +1,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
-.phrase {
+.directory {
   background-color: $darkest-green;
-  padding: 2rem 0;
-  color: white;
   @include flex-center($direction: column);
-  &__heading {
-    font-size: 50px;
-    padding: 1rem 0;
-  }
   &__button {
     color: $primary-black;
-    width: 300px;
+    width: 90vw;
+    margin: 1rem 0;
     border: $dark-turquoise solid 4px;
     text-align: center;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: $primary-white;
-  }
-  &__body {
-    padding: 1rem 0;
   }
 }
