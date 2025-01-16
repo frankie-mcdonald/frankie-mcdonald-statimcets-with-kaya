@@ -4,7 +4,7 @@ import Kaya from "../../assets/images/kaya.png";
 function KayaLogo() {
   return (
     <figure className="logo">
-      <img className="logo__img" src={Kaya} alt="Kaya Waving" />
+      {/* <img className="logo__img" src={Kaya} alt="Kaya Waving" /> */}
     </figure>
   );
 }
