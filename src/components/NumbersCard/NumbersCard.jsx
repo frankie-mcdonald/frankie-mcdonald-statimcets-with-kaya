@@ -1,12 +1,11 @@
 import "./NumbersCard.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import Kaya1 from "../../assets/images/kaya-1.jpg";
+
 import Volume from "../../assets/icons/volume.png";
 
 function NumbersCard() {
   const baseURL = import.meta.env.VITE_API_URL;
-  // console.log("BASE URL", baseURL);
 
   const [numbers, setNumbers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

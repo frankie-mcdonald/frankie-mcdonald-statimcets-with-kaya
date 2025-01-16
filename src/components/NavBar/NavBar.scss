@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navbar {
+  background-color: green;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  color: $primary-white;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  @include reset;
+  &__item {
+    margin-right: 2rem;
+  }
+}

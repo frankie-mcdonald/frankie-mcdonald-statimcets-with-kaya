@@ -1,32 +1,24 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
-.phrase {
+.directory {
   background-color: $darkest-green;
-  padding: 2rem 0;
-  color: white;
   @include flex-center($direction: column);
-  &__heading {
-    font-size: 50px;
-    padding: 1rem 0;
-  }
   &__button {
-    display: flex;
+    font-family: "bcsans";
     color: $primary-black;
-    // width: 300px;
-    border: $dark-turquoise solid 4px;
+    width: 90vw;
+    margin: 1rem 0;
+    border: #cdeade solid 4px;
     text-align: center;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.1rem;
     background-color: $primary-white;
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    // filter: blur(10px);
     &:active {
       transform: translateY(3px) translateX(3px);
     }
-  }
-  &__body {
-    padding: 1rem 0;
   }
 }

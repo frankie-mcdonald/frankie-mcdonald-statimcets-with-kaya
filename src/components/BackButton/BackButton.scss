@@ -1,0 +1,15 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.back-icon {
+  margin: 1rem;
+  padding: 0.9px;
+  width: 3rem;
+  height: 3rem;
+  background-color: $dark-turquoise;
+  border-radius: 50px;
+  &:active {
+    transform: translateY(2px) translateX(2px);
+    background-color: $primary-white;
+  }
+}

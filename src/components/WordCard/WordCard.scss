@@ -1,0 +1,36 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.word {
+  background-color: $dark-forest-green;
+  padding: 2rem 0;
+  @include flex-center($direction: column);
+  color: white;
+  &__heading {
+    font-size: 50px;
+    padding: 1rem 0;
+  }
+  &__button {
+    display: flex;
+    color: $primary-black;
+    // width: 300px;
+    border: $dark-turquoise solid 4px;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: $primary-white;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
+      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    &:active {
+      transform: translateY(3px) translateX(3px);
+    }
+  }
+  &__body {
+    padding: 1rem 0;
+  }
+  &__icon {
+    width: 25px;
+    margin-right: 0.5rem;
+  }
+}
