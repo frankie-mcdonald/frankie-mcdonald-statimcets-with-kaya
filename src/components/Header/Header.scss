@@ -1,0 +1,12 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.header {
+  background-color: $primary-black;
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    color: $primary-white;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+  }
+}

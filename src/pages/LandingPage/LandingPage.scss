@@ -68,7 +68,7 @@ body {
     font-weight: bolder;
     font-size: 1rem;
     cursor: pointer;
-    position: relative;
+    // position: relative;
     z-index: 2;
     border-radius: 50px;
     animation: buttonPop 1.5s ease-out forwards;
@@ -99,7 +99,7 @@ body {
     left: -2px;
     background-size: 1000%;
     z-index: -1;
-    width: calc(100% + 10px);
+    width: calc(100% + 8px);
     height: calc(100% + 5px);
     filter: blur(10px);
     animation: glowing 20s linear infinite;

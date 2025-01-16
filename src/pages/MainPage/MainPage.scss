@@ -1,9 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 .main {
   &__hero {
     background-image: url("../../assets/images/statimc-with-kaya-title.jpg");
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 280px;
+    height: 300px;
+    @include tablet {
+      height: 350px;
+    }
+    @include desktop {
+      height: 700px;
+    }
   }
+}
+
+.back-icon {
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
 }
