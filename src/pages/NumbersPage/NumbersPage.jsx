@@ -1,8 +1,6 @@
 import "./NumbersPage.scss";
-import { NavLink } from "react-router-dom";
 import NumbersCard from "../../components/NumbersCard/NumbersCard";
 import NumbersVideo from "../../assets/video/statimcets-numbers.mp4";
-import Back from "../../assets/icons/previous-green.png";
 import Header from "../../components/Header/Header";
 function NumbersPage() {
   return (

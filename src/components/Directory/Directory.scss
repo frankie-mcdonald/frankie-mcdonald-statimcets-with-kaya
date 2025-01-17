@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 .directory {
   background-color: $darkest-green;
+  border-bottom: 2px $primary-white solid;
   @include flex-center($direction: column);
   &__button {
     font-family: "bcsans";
@@ -16,7 +17,6 @@
     background-color: $primary-white;
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
-    // filter: blur(10px);
     &:active {
       transform: translateY(3px) translateX(3px);
     }

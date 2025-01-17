@@ -7,6 +7,7 @@
     background-size: cover;
     width: 100vw;
     height: 300px;
+    border-bottom: 2px $primary-white solid;
     @include tablet {
       height: 350px;
     }

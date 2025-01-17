@@ -12,9 +12,9 @@ function MainPage() {
       <Header />
       <section className="main">
         <figure className="main__hero"></figure>
-        <Directory />
         <WordCard />
         <PhraseCard />
+        <Directory />
         <NavBar />
       </section>
     </>

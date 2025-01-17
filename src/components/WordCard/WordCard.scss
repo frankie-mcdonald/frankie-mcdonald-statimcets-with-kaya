@@ -6,6 +6,8 @@
   padding: 2rem 0;
   @include flex-center($direction: column);
   color: white;
+  border-bottom: 2px $primary-white solid;
+
   &__heading {
     font-size: 50px;
     padding: 1rem 0;

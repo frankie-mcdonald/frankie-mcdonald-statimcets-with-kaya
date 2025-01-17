@@ -10,7 +10,9 @@
   align-items: center;
   font-size: 2rem;
   font-weight: bold;
+  width: 100%;
   @include reset;
+  border-bottom: 2px $primary-white solid;
   &__item {
     margin-right: 2rem;
   }
