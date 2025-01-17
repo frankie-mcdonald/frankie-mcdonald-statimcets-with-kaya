@@ -1,7 +1,6 @@
 import "./NumbersCard.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import Volume from "../../assets/icons/volume.png";
 
 function NumbersCard() {

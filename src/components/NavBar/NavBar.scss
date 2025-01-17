@@ -2,16 +2,69 @@
 @use "../../styles/partials/mixins" as *;
 
 .navbar {
-  background-color: green;
-  height: 5rem;
+  background-color: #001303;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   color: $primary-white;
   align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
   @include reset;
-  &__item {
-    margin-right: 2rem;
+  border: 2px $primary-black solid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+
+  &__icon {
+    @include reset;
+    align-content: center;
+    text-align: center;
+    background-color: $primary-black;
+    border: $light-green solid 2px;
+    margin: 1rem 0;
+    box-shadow: 0.18rem 0.18rem 0.18rem 0.18rem rgba(255, 255, 255, 0.147);
+    padding: 0.4rem;
+    border-radius: 15px;
+    width: 50px;
+    @include mobile {
+      width: 60px;
+      box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 0.147);
+    }
+    @include tablet {
+      width: 90px;
+    }
+    @include desktop {
+      width: 120px;
+    }
+    @include desktop-big {
+      width: 150px;
+      height: 150px;
+      margin: 4rem 0;
+    }
+  }
+  &__body {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    @include mobile {
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+  &__login {
+    display: flex;
+    align-items: center;
+    background-color: rgb(24, 37, 24);
+    border-radius: 15px;
+    border: $light-green solid 2px;
+    padding: 0.25rem 0.75rem;
+    box-shadow: 0.18rem 0.18rem 0.18rem 0.18rem rgba(255, 255, 255, 0.147);
+    @include desktop {
+      padding: 2rem 3rem;
+    }
   }
 }

@@ -6,12 +6,19 @@
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 300px;
+    height: 200px;
+    border-bottom: 0.25px $primary-white solid;
     @include tablet {
       height: 350px;
+      border-width: 1px;
     }
     @include desktop {
       height: 700px;
+      border-width: 3px;
+    }
+    @include desktop-big {
+      height: 1020px;
+      background-repeat: no-repeat;
     }
   }
 }
