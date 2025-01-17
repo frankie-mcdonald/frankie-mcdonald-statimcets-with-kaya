@@ -18,8 +18,8 @@ function NavBar() {
       </NavLink>
       <div className="navbar__login">
         {" "}
-        <KayaLogo />
         <p className="navbar__body">Login</p>
+        <KayaLogo />
       </div>
     </nav>
   );

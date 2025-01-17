@@ -9,7 +9,7 @@
     cursor: pointer;
   }
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
@@ -31,13 +31,11 @@
     margin-top: 2rem;
     @include tablet {
       font-size: 1rem;
-    }
-    @include tablet {
-      display: none;
+      // margin: 4rem;
     }
   }
   &__image {
-    width: 100%;
+    width: 80%;
     border-radius: 50px;
     border: $primary-white 3px solid;
     margin-top: 2.2rem;
@@ -45,6 +43,7 @@
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
     @include tablet {
       width: 600px;
+      margin-top: 4rem;
     }
     @include desktop {
       width: 350px;
@@ -56,10 +55,14 @@
     }
   }
   &__icon {
-    width: 50px;
+    width: 30px;
     position: relative;
-    top: -6rem;
+    top: -4rem;
     right: -3rem;
+    @include mobile {
+      width: 40px;
+      top: -5rem;
+    }
     @include tablet {
       width: 70px;
       right: -6rem;
@@ -76,9 +79,10 @@
   }
 }
 .numbers__cards {
-  @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop-big {
+    margin: 0 15rem;
   }
 }

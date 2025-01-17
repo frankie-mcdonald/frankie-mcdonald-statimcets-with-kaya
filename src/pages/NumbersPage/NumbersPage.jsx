@@ -9,9 +9,9 @@ function NumbersPage() {
     <>
       <Header />
       <div className="numbers">
-        <section className="numbers-hero">
-          <h1 className="numbers-hero__header">Cuystwí xekcál!</h1>
-          <h2 className="numbers-hero__subheader">Let's learn numbers!</h2>
+        <section className="numbers__hero">
+          <h1 className="numbers__hero-header">Cuystwí xekcál!</h1>
+          <h2 className="numbers__hero-subheader">Let's learn numbers!</h2>
         </section>
         <NumbersCard />
         <h3 className="numbers__title">All together now!</h3>
