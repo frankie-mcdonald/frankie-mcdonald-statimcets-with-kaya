@@ -10,7 +10,7 @@ function NavBar() {
       <NavLink to="/">
         <img className="navbar__icon" src={homeIcon} alt="home icon" />
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/alphabet">
         <img className="navbar__icon" src={abcIcon} alt="abc icon" />
       </NavLink>
       <NavLink to="/numbers">
