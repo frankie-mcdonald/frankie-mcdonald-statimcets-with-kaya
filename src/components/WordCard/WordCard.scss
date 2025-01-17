@@ -1,86 +1,132 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
+.random-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $dark-forest-green;
+}
 .word-card {
   background-color: $dark-forest-green;
-  padding: 2rem 0;
   @include flex-center($direction: column);
   color: white;
-  border-bottom: 2px $primary-white solid;
-  height: 300px;
+  width: 100%;
+  border-bottom: 0.25px $primary-white solid;
+  @include tablet {
+    border-width: 1px;
+  }
+  @include desktop {
+    border-width: 3px;
+  }
   &__next {
-    color: $primary-black;
-    border: $primary-white solid 2px;
-    // margin: 4rem;
-    padding: 1rem;
+    color: $primary-white;
+    padding: 0.5rem;
+    margin: 1rem 8rem 0.5rem 8rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    border: $primary-black solid 3px;
+    border-radius: 50px;
     font-family: "nunito";
     font-weight: bold;
-    width: 100%;
+    width: 50%;
     cursor: pointer;
-    font-size: 1.5rem;
-    background-color: rgba(112, 177, 112, 0.246);
-    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
-      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    background-color: rgba(0, 255, 0, 0.246);
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(248, 248, 248, 0.039);
+    font-size: 0.75rem;
+    @include tablet {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+    }
+    @include desktop-big {
+      font-size: 3rem;
+      padding: 1rem;
+      width: 40%;
+      margin: 3rem 0;
+    }
     &:active {
       transform: translateY(3px) translateX(3px);
     }
   }
   &__heading {
-    font-size: 50px;
+    font-size: 2rem;
     padding: 1rem 0;
+    @include mobile {
+      font-size: 2.5rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+      padding: 1.5rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+    }
+    @include desktop-big {
+      font-size: 8rem;
+    }
   }
   &__button {
     display: flex;
     color: $primary-black;
     border: $dark-turquoise solid 4px;
     text-align: center;
-    padding: 1rem 2rem;
     border-radius: 1rem;
-    font-size: 2rem;
+    margin: 0 1rem;
     cursor: pointer;
     background-color: $primary-white;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
-      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(1, 255, 128, 0.156),
+      0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 255, 191, 0.2);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    @include mobile {
+      font-size: 1.5rem;
+      padding: 1rem 1rem;
+    }
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
+    @include desktop-big {
+      font-size: 4rem;
+      margin: 2rem 0;
+    }
     &:active {
       transform: translateY(3px) translateX(3px);
     }
   }
   &__body {
     padding: 1.5rem 0;
+    font-size: 1rem;
+    @include mobile {
+      font-size: 1.1rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+    @include desktop-big {
+      font-size: 3rem;
+      margin: 2rem 0;
+    }
   }
   &__icon {
-    width: 25px;
+    width: 20px;
+    height: 20px;
     margin-right: 0.5rem;
+    @include tablet {
+      width: 25px;
+      height: 25px;
+      margin-right: 1rem;
+    }
   }
 }
 .phrase-card {
   background-color: $darkest-green;
-  padding: 2rem 0;
-  color: white;
-  border-bottom: 2px $primary-white solid;
-  height: 250px;
-  @include flex-center($direction: column);
-  &__heading {
-    font-size: 50px;
-    padding: 1rem 0;
-  }
-  &__button {
-    display: flex;
-    color: $primary-black;
-    border: $dark-turquoise solid 4px;
-    text-align: center;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    background-color: $primary-white;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
-      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
-    &:active {
-      transform: translateY(3px) translateX(3px);
-    }
-  }
-  &__body {
-    padding: 1.5rem 0;
-  }
 }

@@ -1,23 +1,47 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 .header {
-  background-color: $primary-black;
+  background-color: rgb(1, 20, 3);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 60px;
   width: 100%;
+  border-bottom: white 0.25px solid;
+  @include mobile {
+    height: 80px;
+  }
+  @include tablet {
+    height: 100px;
+    padding: 1rem;
+  }
+  @include desktop {
+    height: 150px;
+    padding: 2rem;
+  }
+  @include desktop-big {
+    height: 200px;
+    padding: 3rem;
+  }
+
   &__title {
     color: $primary-white;
-    font-size: 2rem;
-    padding: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    @include mobile {
+      font-size: 1.5rem;
+    }
     @include tablet {
       font-size: 2.5rem;
       padding: 2.5rem;
     }
     @include desktop {
       padding: 3rem;
-      font-size: 3rem;
+      font-size: 4rem;
+    }
+    @include desktop-big {
+      font-size: 5rem;
+      padding: 5rem;
     }
   }
 }

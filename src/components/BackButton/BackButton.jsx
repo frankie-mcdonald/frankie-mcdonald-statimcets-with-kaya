@@ -17,12 +17,15 @@ function BackButton() {
   };
 
   return (
-    <img
-      onClick={handleBackClick}
-      className="back-icon"
-      src={Back}
-      alt="Back button"
-    />
+    <div className="back-icon-div">
+      {" "}
+      <img
+        onClick={handleBackClick}
+        className="back-icon"
+        src={Back}
+        alt="Back button"
+      />
+    </div>
   );
 }
 

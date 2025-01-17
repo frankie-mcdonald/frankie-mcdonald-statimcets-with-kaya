@@ -42,7 +42,10 @@ function WordCard() {
     setCurrentIndex(nextIndex);
   };
   return (
-    <section className="randomCard">
+    <section className="random-card">
+      <button className="word-card__next" onClick={nextWord}>
+        Click here to genrate new word and phrase!
+      </button>
       <div className="word-card">
         <h1 className="word-card__heading">Random word!</h1>
         <div
@@ -54,23 +57,17 @@ function WordCard() {
         </div>
         <h3 className="word-card__body">{currentItem["word-translation"]}</h3>
       </div>
-
-      <div className="phrase-card">
-        <h1 className="phrase-card__heading">Random Phrase!</h1>
+      <div className="word-card phrase-card">
+        <h1 className="word-card__heading">Random Phrase!</h1>
         <div
-          className="phrase-card__button"
+          className="word-card__button"
           onClick={() => playAudio(currentItem["phrase-audio"])}
         >
           <img src={volume} className="word-card__icon" alt="Play audio" />
           {currentItem.phrase}
         </div>
-        <h3 className="phrase-card__body">
-          {currentItem["phrase-translation"]}
-        </h3>
+        <h3 className="word-card__body">{currentItem["phrase-translation"]}</h3>
       </div>
-      <button className="word-card__next" onClick={nextWord}>
-        Click here to genrate new word and phrase!
-      </button>
     </section>
   );
 }

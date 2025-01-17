@@ -2,6 +2,7 @@ import "./NumbersPage.scss";
 import NumbersCard from "../../components/NumbersCard/NumbersCard";
 import NumbersVideo from "../../assets/video/statimcets-numbers.mp4";
 import Header from "../../components/Header/Header";
+import NavBar from "../../components/NavBar/NavBar";
 
 function NumbersPage() {
   return (
@@ -19,6 +20,7 @@ function NumbersPage() {
           Your browser does not support the video tag.
         </video>
       </div>
+      <NavBar />
     </>
   );
 }
