@@ -2,6 +2,7 @@ import "./NumbersPage.scss";
 import NumbersCard from "../../components/NumbersCard/NumbersCard";
 import NumbersVideo from "../../assets/video/statimcets-numbers.mp4";
 import Header from "../../components/Header/Header";
+
 function NumbersPage() {
   return (
     <>

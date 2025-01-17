@@ -2,18 +2,49 @@
 @use "../../styles/partials/mixins" as *;
 
 .navbar {
-  background-color: green;
-  height: 5rem;
+  background-color: rgb(0, 0, 0);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   color: $primary-white;
   align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
   @include reset;
   border-bottom: 2px $primary-white solid;
-  &__item {
-    margin-right: 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  &__icon {
+    @include reset;
+    align-content: center;
+    text-align: center;
+    background-color: $dark-turquoise;
+    padding: 0.25rem;
+    border: white solid 1px;
+    border-radius: 20px;
+    margin: 1.2rem;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
+      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    width: 60px;
+    @include tablet {
+      width: 80px;
+    }
+    @include desktop {
+      width: 100px;
+    }
+  }
+  &__body {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+  &__login {
+    display: flex;
+    align-items: center;
   }
 }

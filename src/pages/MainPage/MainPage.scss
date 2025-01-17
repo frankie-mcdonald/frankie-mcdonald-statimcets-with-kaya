@@ -1,6 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 .main {
+  height: 110vh;
+  @include tablet {
+    height: 140vh;
+  }
+  @include desktop {
+    height: 100vh;
+  }
   &__hero {
     background-image: url("../../assets/images/statimc-with-kaya-title.jpg");
     background-position: center;
