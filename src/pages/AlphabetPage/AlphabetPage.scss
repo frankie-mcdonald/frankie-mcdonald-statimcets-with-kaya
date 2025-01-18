@@ -2,16 +2,42 @@
 @use "../../styles/partials/mixins" as *;
 
 .alphabet {
-  //   @include reset;
-  padding: 5rem;
-  &__item {
-    border: #35270c solid 2px;
-    border-radius: 10px;
-    @include reset;
-    padding: 1rem;
-    margin: 1rem;
+  text-align: center;
+  background-color: #dce6dd;
+  padding-bottom: 6rem;
+  &__header {
     font-size: 2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-image: url("../../assets/images/nahani-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.5px rgb(0, 19, 11);
+  }
+  &__subheader {
+    font-size: 0.75rem;
+    color: $green;
+  }
+  &__item {
+    display: inline-block;
+    background-color: $primary-white;
+    border: #35270c solid 1px;
+    border-radius: 5px;
+    @include reset;
+    cursor: pointer;
     box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 255, 0.039),
       0.2rem 0.2rem 0.2rem 0.2rem rgba(93, 68, 18, 0.2);
+    align-content: center;
+    margin: 0.25rem;
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+    &:active {
+      transform: translateY(3px) translateX(3px);
+    }
+    &:hover {
+      background-color: #b8c6b0;
+    }
   }
 }
