@@ -12,6 +12,7 @@
   color: white;
   width: 100%;
   border-bottom: 0.25px $primary-white solid;
+  text-align: center;
   @include tablet {
     border-width: 1px;
   }
@@ -37,14 +38,15 @@
     @include tablet {
       font-size: 1rem;
       padding: 0.5rem 1rem;
+      border-width: 3px;
     }
     @include desktop {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     @include desktop-big {
-      font-size: 3rem;
+      font-size: 2.8rem;
       padding: 1rem;
-      width: 40%;
+      width: 50%;
       margin: 3rem 0;
     }
     &:active {
@@ -52,10 +54,10 @@
     }
   }
   &__heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
     @include mobile {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     @include tablet {
       font-size: 3rem;
@@ -65,7 +67,7 @@
       font-size: 4rem;
     }
     @include desktop-big {
-      font-size: 8rem;
+      font-size: 5rem;
     }
   }
   &__button {
@@ -87,12 +89,13 @@
     }
     @include tablet {
       font-size: 2rem;
+      border-width: 4px;
     }
     @include desktop {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     @include desktop-big {
-      font-size: 4rem;
+      font-size: 3.5rem;
       margin: 2rem 0;
     }
     &:active {
@@ -112,7 +115,7 @@
       font-size: 2rem;
     }
     @include desktop-big {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 2rem 0;
     }
   }

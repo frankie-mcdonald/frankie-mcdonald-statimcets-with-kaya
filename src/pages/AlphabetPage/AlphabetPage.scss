@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.alphabet {
+  //   @include reset;
+  padding: 5rem;
+  &__item {
+    border: #35270c solid 2px;
+    border-radius: 10px;
+    @include reset;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 255, 0.039),
+      0.2rem 0.2rem 0.2rem 0.2rem rgba(93, 68, 18, 0.2);
+  }
+}

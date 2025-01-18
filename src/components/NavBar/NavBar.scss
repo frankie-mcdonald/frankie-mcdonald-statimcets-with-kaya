@@ -32,6 +32,7 @@
     }
     @include tablet {
       width: 90px;
+      border-width: 3px;
     }
     @include desktop {
       width: 90px;
