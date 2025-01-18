@@ -58,7 +58,9 @@ function WordCard() {
         <h3 className="word-card__body">{currentItem["word-translation"]}</h3>
       </div>
       <div className="word-card phrase-card">
-        <h1 className="word-card__heading">Random Phrase!</h1>
+        <h1 className="word-card__heading">
+          {currentItem.word} used in a sentence
+        </h1>
         <div
           className="word-card__button"
           onClick={() => playAudio(currentItem["phrase-audio"])}
