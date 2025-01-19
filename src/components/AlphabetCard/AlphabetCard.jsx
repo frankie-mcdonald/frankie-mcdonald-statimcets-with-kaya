@@ -29,13 +29,13 @@ function AlphabetCard({ details }) {
             <img
               src={volumewhite}
               alt="play audio button"
-              className="alphabet-card__icon-1"
+              className="alphabet-card__icon"
             />
             {details.example1}
           </h3>
           <h3 className="alphabet-card__body">{details.exampleTranslation1}</h3>
         </div>
-        <div className="alphabet-card__examples-div">
+        {/* <div className="alphabet-card__examples-div">
           <h3
             className="alphabet-card__button"
             onClick={() => playAudio(details.audio2)}
@@ -62,7 +62,7 @@ function AlphabetCard({ details }) {
             {details.example3}
           </h3>
           <h3 className="alphabet-card__body">{details.exampleTranslation3}</h3>
-        </div>
+        </div> */}
       </section>
     </>
   );
