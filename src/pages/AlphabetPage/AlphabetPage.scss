@@ -26,6 +26,20 @@
     background-size: cover;
     color: white;
     -webkit-text-stroke: 0.5px rgb(0, 19, 11);
+    @include tablet {
+      padding: 2rem 0;
+      font-size: 3rem;
+      -webkit-text-stroke: 0.75px rgb(0, 19, 11);
+    }
+    @include desktop {
+      padding: 4rem 0;
+      font-size: 5rem;
+      -webkit-text-stroke: 1px rgb(0, 0, 0);
+    }
+    @include desktop-big {
+      padding: 5rem 0;
+      font-size: 6rem;
+    }
   }
   &__subheader {
     font-size: 0.75rem;

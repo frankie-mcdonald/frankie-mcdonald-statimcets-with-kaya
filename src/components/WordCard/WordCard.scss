@@ -35,13 +35,18 @@
     background-color: rgba(0, 255, 0, 0.246);
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(248, 248, 248, 0.039);
     font-size: 0.75rem;
-    @include tablet {
+    @include mobile {
+      width: 45%;
       font-size: 1rem;
-      padding: 0.5rem 1rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
       border-width: 3px;
     }
     @include desktop {
       font-size: 2rem;
+      // padding: 1.5rem 4rem;
     }
     @include desktop-big {
       font-size: 2.8rem;

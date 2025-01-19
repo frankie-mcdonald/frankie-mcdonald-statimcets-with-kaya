@@ -12,31 +12,29 @@ function LandingPage() {
   );
   const frameArray = Object.values(frames).map((module) => module.default);
   const [frameIndex, setFrameIndex] = useState(0);
-  const [playCount, setPlayCount] = useState(0); // Tracks how many times the animation has played
+  const [playCount, setPlayCount] = useState(0);
 
-  const maxPlays = 3; // Set the number of times the animation should play
+  const maxPlays = 3;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFrameIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
 
-        // Check if the animation has reached the last frame
         if (nextIndex >= frameArray.length) {
-          setPlayCount((prevCount) => prevCount + 1); // Increment the play count
-          return 0; // Restart at the first frame
+          setPlayCount((prevCount) => prevCount + 1);
+          return 0;
         }
 
         return nextIndex;
       });
-    }, 1000 / 24); // 24 FPS
+    }, 1000 / 24);
 
-    // Stop the animation after `maxPlays` cycles
     if (playCount >= maxPlays) {
       clearInterval(interval);
     }
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, [playCount]);
 
   return (

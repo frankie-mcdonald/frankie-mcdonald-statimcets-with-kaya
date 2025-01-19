@@ -5,19 +5,34 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
-    url("../../assets/images/underwater.jpg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  margin: 1rem;
-  border: white solid 2px;
-  width: 90%;
-  height: 75%;
+  margin-bottom: 10rem;
 
+  &__container {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
+      url("../../assets/images/underwater.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    margin: 1rem 0;
+    border: white solid 2px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+  &__animation-container {
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+  &__animation {
+    width: 80px;
+    height: auto;
+    filter: brightness(150%);
+  }
   &__title {
-    font-size: 2rem;
-    padding: 1.5rem;
+    font-size: 1rem;
+    padding: 1.5rem 0;
     color: $primary-white;
     @include tablet {
       font-size: 3rem;
@@ -39,34 +54,40 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin: 2rem 1rem;
     position: relative;
-    top: -1.5rem;
-    @include tablet {
-      flex-direction: row;
-      justify-content: center;
-      margin-bottom: 2rem;
-      top: -3.5rem;
-    }
-    @include desktop {
-      top: -1rem;
-    }
+    bottom: -1.5rem;
   }
   &__item {
     @include reset;
     font-family: "bcsans";
     color: $primary-black;
-    border: #007947 solid 4px;
+    border: #007947 solid 2px;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 10px;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: $primary-white;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(255, 255, 255, 0.039),
-      0.12rem 0.12rem 0.12rem 0.12rem rgba(0, 255, 225, 0.2);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 225, 0.2);
     width: 250px;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 0;
+    animation: buttonPop 1.5s ease-out forwards;
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgb(169, 20, 20);
+      border: rgb(171, 27, 27) 2px solid;
+      color: $primary-white;
+    }
+    &.correct {
+      background-color: $green;
+      border: white solid 1px;
+      color: $primary-white;
+    }
     @include tablet {
       width: 240px;
       margin: 1rem;
@@ -79,5 +100,56 @@
     &:active {
       transform: translateY(3px) translateX(3px);
     }
+    &::before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #58a65b,
+        $green,
+        $mid-forest-green,
+        $light-green,
+        $green,
+        $dark-turquoise,
+        $light-green,
+        $darkest-green
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      width: calc(100% + 8px);
+      height: calc(100% + 5px);
+      filter: blur(13px);
+      animation: glowing 10s linear infinite;
+      transition: opacity 0.9s ease-in-out;
+      border-radius: 20px;
+      opacity: 0.6;
+    }
+  }
+}
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
