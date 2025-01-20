@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20rem;
+  margin-bottom: 40rem;
   text-align: center;
   &__title {
     color: $primary-white;
@@ -13,8 +13,8 @@
   &__button {
     color: $primary-white;
     font-size: 1rem;
-    border: $light-green solid 1px;
-    border-radius: 40px;
+    border: $light-green solid 0.0625rem;
+    border-radius: 2.5rem;
     padding: 1rem 3rem;
     background-color: $primary-black;
     margin: 2rem 0;
@@ -27,16 +27,16 @@
     @include desktop {
       font-size: 3rem;
       padding: 0.75rem 4rem;
-      border-radius: 40px;
+      border-radius: 2.5rem;
       margin: 3rem;
     }
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
   &__body {
     color: $primary-white;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding: 1rem 0 0 0;
     @include tablet {
       font-size: 1rem;

@@ -17,13 +17,13 @@
     padding-bottom: 20rem;
   }
   &__hero {
-    border-bottom: $dark-turquoise 2px solid;
+    border-bottom: $dark-turquoise 0.125rem solid;
     background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
       url("../../assets/images/underwater.jpg");
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 200px;
+    height: 12.5rem;
     display: flex;
     color: $primary-white;
     @include flex-box(
@@ -44,7 +44,7 @@
 
     @include desktop {
       margin-bottom: 2rem;
-      height: 400px;
+      height: 25rem;
     }
     &-subheader {
       font-size: 2rem;
@@ -71,16 +71,16 @@
     width: 100vw;
     text-align: center;
     color: $primary-white;
-    border-top: $dark-turquoise 5px solid;
-    -webkit-text-stroke: 0.5px rgb(72, 81, 81);
+    border-top: $dark-turquoise 0.3125rem solid;
+    -webkit-text-stroke: 0.0313rem rgb(72, 81, 81);
     @include tablet {
       font-size: 4rem;
     }
   }
   &__video {
     width: 80%;
-    border-radius: 50px;
-    border: $primary-white 3px solid;
+    border-radius: 3.125rem;
+    border: $primary-white 0.1875rem solid;
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.019),
       0.25rem 0.5rem 0.25rem 0.25rem rgba(255, 255, 255, 0.127);
     margin: 3rem 0 3rem 0;
@@ -89,14 +89,14 @@
       margin-bottom: 5rem;
     }
     @include desktop {
-      width: 1200px;
+      width: 75rem;
       margin-bottom: 8rem;
     }
   }
   &__button {
     color: $primary-white;
-    border: $light-green solid 1px;
-    border-radius: 30px;
+    border: $light-green solid 0.0625rem;
+    border-radius: 1.875rem;
     padding: 0.35rem 1.5rem;
     background-color: $primary-black;
     margin: 1rem 0;
@@ -108,7 +108,7 @@
     @include desktop {
       font-size: 2.5rem;
       padding: 0.75rem 2rem;
-      border-radius: 40px;
+      border-radius: 2.5rem;
       margin: 2rem;
     }
     @include desktop-big {
@@ -116,12 +116,12 @@
       padding: 1rem 3rem;
     }
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
   &__body {
     color: $primary-white;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding: 0.75rem 0;
     @include mobile {
       font-size: 1rem;

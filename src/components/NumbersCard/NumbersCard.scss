@@ -21,15 +21,14 @@
       url("../../assets/images/into_the_water.jpg");
     width: 100vw;
     color: $primary-white;
-    border-top: $dark-turquoise 5px solid;
-    -webkit-text-stroke: 0.5px rgb(72, 81, 81);
+    border-top: $dark-turquoise 0.3125rem solid;
+    -webkit-text-stroke: 0.0313rem rgb(72, 81, 81);
     @include tablet {
       font-size: 4rem;
     }
     @include desktop {
-      // display: none;
-      width: 350px;
-      border: white solid 2px;
+      width: 21.875rem;
+      border: white solid 0.125rem;
     }
   }
   &__body {
@@ -42,45 +41,45 @@
   }
   &__image {
     width: 80%;
-    border-radius: 50px;
-    border: $primary-white 3px solid;
+    border-radius: 3.125rem;
+    border: $primary-white 0.1875rem solid;
     margin-top: 2.2rem;
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
     @include tablet {
-      width: 600px;
+      width: 37.5rem;
       margin-top: 4rem;
     }
     @include desktop {
-      width: 350px;
+      width: 21.875rem;
       margin: 2rem;
     }
     &:active {
-      box-shadow: 0 5px #666;
-      transform: translateY(3px) translateX(3px);
+      box-shadow: 0 0.3125rem #666;
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
   &__icon {
-    width: 30px;
+    width: 1.875rem;
     position: relative;
     top: -4rem;
     right: -3rem;
     @include mobile {
-      width: 40px;
+      width: 2.5rem;
       top: -5rem;
     }
     @include tablet {
-      width: 70px;
+      width: 4.375rem;
       right: -6rem;
       top: -8rem;
     }
     @include desktop {
-      width: 40px;
+      width: 2.5rem;
       right: -5rem;
       top: -7rem;
     }
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
 }

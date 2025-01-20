@@ -6,7 +6,7 @@
   background-color: #dce6dd;
   padding-bottom: 20rem;
   @include mobile {
-    padding: 2rem 1rem 20rem 1rem;
+    padding: 2rem 1rem 30rem 1rem;
   }
   @include tablet {
     padding: 2rem 2rem 30rem 2rem;
@@ -25,16 +25,16 @@
     background-position: center;
     background-size: cover;
     color: white;
-    -webkit-text-stroke: 0.5px rgb(0, 19, 11);
+    -webkit-text-stroke: 0.0313rem rgb(0, 19, 11);
     @include tablet {
       padding: 2rem 0;
       font-size: 3rem;
-      -webkit-text-stroke: 0.75px rgb(0, 19, 11);
+      -webkit-text-stroke: 0.0469rem rgb(0, 19, 11);
     }
     @include desktop {
       padding: 4rem 0;
       font-size: 5rem;
-      -webkit-text-stroke: 1px rgb(0, 0, 0);
+      -webkit-text-stroke: 0.0625rem rgb(0, 0, 0);
     }
     @include desktop-big {
       padding: 5rem 0;
@@ -60,38 +60,38 @@
     cursor: pointer;
     display: inline-block;
     background-color: $primary-white;
-    border: #35270c solid 1px;
-    border-radius: 5px;
+    border: #35270c solid 0.0625rem;
+    border-radius: 0.3125rem;
     box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem rgba(0, 0, 255, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(93, 68, 18, 0.2);
     align-content: center;
     margin: 0.25rem;
     font-size: 1rem;
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     @include mobile {
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
       font-size: 1.5rem;
     }
     @include tablet {
-      width: 60px;
-      height: 60px;
+      width: 3.75rem;
+      height: 3.75rem;
     }
     @include desktop {
-      width: 80px;
-      height: 80px;
+      width: 5rem;
+      height: 5rem;
       font-size: 2rem;
-      border-radius: 15px;
+      border-radius: 0.9375rem;
     }
     @include desktop-big {
-      width: 100px;
-      height: 100px;
+      width: 6.25rem;
+      height: 6.25rem;
       font-size: 3rem;
       margin: 0.75rem;
     }
     &:active {
-      transform: translateY(2px) translateX(2px);
+      transform: translateY(0.125rem) translateX(0.125rem);
     }
     &:hover {
       background-color: #b8c6b0;

@@ -14,8 +14,8 @@
       0.25rem 0.2rem 0.2rem 0.2rem rgb(255, 255, 255, 0.2);
     background-position: center;
     background-size: cover;
-    border-radius: 40px;
-    border: white solid 2px;
+    border-radius: 2.5rem;
+    border: white solid 0.125rem;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -27,34 +27,34 @@
     }
   }
   &__animation-container {
-    height: 120px;
+    height: 7.5rem;
     margin-bottom: 2rem;
     @include mobile {
-      height: 150px;
+      height: 9.375rem;
       margin-bottom: 4rem;
     }
     @include desktop {
-      height: 200px;
+      height: 12.5rem;
       margin-bottom: 8rem;
     }
     @include desktop-big {
-      height: 400px;
+      height: 25rem;
     }
   }
   &__animation {
-    width: 90px;
+    width: 5.625rem;
     filter: brightness(150%);
     @include mobile {
-      width: 120px;
+      width: 7.5rem;
     }
     @include tablet {
-      width: 160px;
+      width: 10rem;
     }
     @include desktop {
-      width: 240px;
+      width: 15rem;
     }
     @include desktop-big {
-      width: 390px;
+      width: 24.375rem;
     }
   }
   &__title {
@@ -91,15 +91,15 @@
     @include reset;
     font-family: "bcsans";
     color: $primary-black;
-    border: #f5fcf9 solid 3px;
+    border: #f5fcf9 solid 0.1875rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: $primary-white;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 225, 0.2);
-    width: 250px;
+    width: 15.625rem;
     margin-bottom: 0.75rem;
     position: relative;
     z-index: 1;
@@ -108,17 +108,17 @@
     cursor: pointer;
 
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
       background-color: rgb(255, 255, 255);
     }
     &.selected {
-      background-color: rgb(169, 20, 20);
-      border: rgb(171, 27, 27) 2px solid;
+      background-color: rgb(255, 0, 0);
+      border: rgb(255, 0, 0) 0.125rem solid;
       color: $primary-white;
     }
     &.correct {
       background-color: $green;
-      border: white solid 1px;
+      border: rgb(0, 255, 38) solid 0.0625rem;
       color: $primary-white;
     }
     &::before {
@@ -135,29 +135,29 @@
         $darkest-green
       );
       position: absolute;
-      top: -2px;
-      left: -2px;
+      top: -0.125rem;
+      left: -0.125rem;
       background-size: 400%;
       z-index: -1;
       width: calc(100% + 8px);
       height: calc(100% + 5px);
-      filter: blur(13px);
+      filter: blur(0.8125rem);
       animation: glowing 10s linear infinite;
       transition: opacity 0.9s ease-in-out;
-      border-radius: 20px;
+      border-radius: 1.25rem;
       opacity: 0.6;
     }
     @include mobile {
-      width: 300px;
+      width: 18.75rem;
     }
     @include tablet {
-      width: 240px;
+      width: 15rem;
       margin: 1rem;
       padding: 1rem 2rem;
       font-size: 2rem;
     }
     @include desktop {
-      width: 250px;
+      width: 15.625rem;
     }
   }
 }
@@ -166,7 +166,7 @@
   width: 60%;
   padding-bottom: 100vh;
   padding-top: 6rem;
-  border-top: white 0.5px solid;
+  border-top: white 0.0313rem solid;
   @include tablet {
     padding-top: 8rem;
   }
@@ -193,9 +193,9 @@
   }
   &__button {
     background-color: $primary-white;
-    border: $light-green 1px solid;
+    border: $light-green 0.0625rem solid;
     padding: 0.25rem 0.5rem;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     color: black;
     display: inline-block;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(30, 255, 0, 0.039),
@@ -208,10 +208,10 @@
     @include desktop {
       font-size: 4rem;
       padding: 1.5rem 3rem;
-      border-width: 3px;
+      border-width: 0.1875rem;
     }
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
 }
