@@ -2,8 +2,6 @@ import "./AlphabetCard.scss";
 import volumewhite from "../../assets/icons/volume.png";
 
 function AlphabetCard({ details }) {
-  console.log("Details object:", details);
-
   const playAudio = (audioUrl) => {
     const fullUrl = audioUrl.startsWith("http")
       ? audioUrl
