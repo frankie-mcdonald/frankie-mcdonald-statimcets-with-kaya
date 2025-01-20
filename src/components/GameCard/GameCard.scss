@@ -5,68 +5,151 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
-    url("../../assets/images/underwater.jpg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  margin: 1rem;
-  border: white solid 2px;
-  width: 90%;
-  height: 75%;
+  margin-bottom: 10rem;
 
-  &__title {
-    font-size: 2rem;
-    padding: 1.5rem;
-    color: $primary-white;
-    @include tablet {
-      font-size: 3rem;
-    }
+  &__container {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
+      url("../../assets/images/underwater.jpg");
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 55, 0.039),
+      0.25rem 0.2rem 0.2rem 0.2rem rgb(255, 255, 255, 0.2);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+    border: white solid 2px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
     @include desktop {
-      font-size: 6rem;
+      margin: 2rem 0;
     }
   }
-  &__image {
-    width: 80%;
-    @include tablet {
-      width: 60%;
+  &__animation-container {
+    height: 120px;
+    margin-bottom: 2rem;
+    @include mobile {
+      height: 150px;
+      margin-bottom: 4rem;
     }
     @include desktop {
-      width: 50%;
+      height: 200px;
+      margin-bottom: 8rem;
+    }
+    @include desktop-big {
+      height: 400px;
+    }
+  }
+  &__animation {
+    width: 90px;
+    filter: brightness(150%);
+    @include mobile {
+      width: 120px;
+    }
+    @include tablet {
+      width: 160px;
+    }
+    @include desktop {
+      width: 240px;
+    }
+    @include desktop-big {
+      width: 390px;
+    }
+  }
+  &__title {
+    font-size: 1rem;
+    padding: 2rem 0;
+    color: $primary-white;
+    @include mobile {
+      font-size: 2rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+    @include desktop {
+      font-size: 4rem;
     }
   }
   &__list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin: 2rem 1rem;
     position: relative;
-    top: -1.5rem;
+    bottom: -1.5rem;
+    justify-content: center;
     @include tablet {
       flex-direction: row;
-      justify-content: center;
-      margin-bottom: 2rem;
-      top: -3.5rem;
     }
-    @include desktop {
-      top: -1rem;
+    @include desktop-big {
+      margin: 4rem 0;
     }
   }
   &__item {
     @include reset;
     font-family: "bcsans";
     color: $primary-black;
-    border: #007947 solid 4px;
+    border: #f5fcf9 solid 3px;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 10px;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: $primary-white;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(255, 255, 255, 0.039),
-      0.12rem 0.12rem 0.12rem 0.12rem rgba(0, 255, 225, 0.2);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 225, 0.2);
     width: 250px;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 0;
+    animation: buttonPop 1.5s ease-out forwards;
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(3px) translateX(3px);
+      background-color: rgb(255, 255, 255);
+    }
+    &.selected {
+      background-color: rgb(169, 20, 20);
+      border: rgb(171, 27, 27) 2px solid;
+      color: $primary-white;
+    }
+    &.correct {
+      background-color: $green;
+      border: white solid 1px;
+      color: $primary-white;
+    }
+    &::before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #58a65b,
+        $green,
+        $mid-forest-green,
+        $light-green,
+        $green,
+        $dark-turquoise,
+        $light-green,
+        $darkest-green
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      width: calc(100% + 8px);
+      height: calc(100% + 5px);
+      filter: blur(13px);
+      animation: glowing 10s linear infinite;
+      transition: opacity 0.9s ease-in-out;
+      border-radius: 20px;
+      opacity: 0.6;
+    }
+    @include mobile {
+      width: 300px;
+    }
     @include tablet {
       width: 240px;
       margin: 1rem;
@@ -76,8 +159,84 @@
     @include desktop {
       width: 250px;
     }
+  }
+}
+.score {
+  color: $primary-white;
+  width: 60%;
+  padding-bottom: 100vh;
+  padding-top: 6rem;
+  border-top: white 0.5px solid;
+  @include tablet {
+    padding-top: 8rem;
+  }
+  &__title {
+    margin-bottom: 2rem;
+    @include tablet {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+  &__body {
+    margin: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+      margin: 2.5rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+      margin: 4rem;
+    }
+  }
+  &__button {
+    background-color: $primary-white;
+    border: $light-green 1px solid;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    color: black;
+    display: inline-block;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(30, 255, 0, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.2);
+
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+      padding: 1.5rem 3rem;
+      border-width: 3px;
+    }
     &:active {
       transform: translateY(3px) translateX(3px);
     }
+  }
+}
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }

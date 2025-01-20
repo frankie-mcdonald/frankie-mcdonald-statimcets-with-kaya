@@ -2,11 +2,23 @@
 @use "../../styles/partials/mixins" as *;
 
 .back-icon {
-  padding: 1.25px;
+  margin: 1rem;
+  width: 2rem;
+  height: 2rem;
   background-color: $dark-turquoise;
   border-radius: 50px;
+  padding: 1.5px;
+  @include mobile {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  @include tablet {
+    width: 3rem;
+    height: 3rem;
+  }
   @include desktop {
-    padding: 0;
+    width: 6rem;
+    height: 6rem;
   }
 
   &:active {

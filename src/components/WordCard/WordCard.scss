@@ -12,6 +12,7 @@
   color: white;
   width: 100%;
   border-bottom: 0.25px $primary-white solid;
+  text-align: center;
   @include tablet {
     border-width: 1px;
   }
@@ -25,7 +26,7 @@
     text-align: center;
     align-items: center;
     align-content: center;
-    border: $primary-black solid 3px;
+    border: $primary-black solid 2px;
     border-radius: 50px;
     font-family: "nunito";
     font-weight: bold;
@@ -34,15 +35,21 @@
     background-color: rgba(0, 255, 0, 0.246);
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(248, 248, 248, 0.039);
     font-size: 0.75rem;
-    @include tablet {
+    @include mobile {
+      width: 45%;
       font-size: 1rem;
-      padding: 0.5rem 1rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-width: 3px;
     }
     @include desktop {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      // padding: 1.5rem 4rem;
     }
     @include desktop-big {
-      font-size: 3rem;
+      font-size: 2.8rem;
       padding: 1rem;
       width: 40%;
       margin: 3rem 0;
@@ -52,10 +59,10 @@
     }
   }
   &__heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
     @include mobile {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     @include tablet {
       font-size: 3rem;
@@ -65,13 +72,13 @@
       font-size: 4rem;
     }
     @include desktop-big {
-      font-size: 8rem;
+      font-size: 5rem;
     }
   }
   &__button {
     display: flex;
     color: $primary-black;
-    border: $dark-turquoise solid 4px;
+    border: $dark-turquoise solid 2px;
     text-align: center;
     border-radius: 1rem;
     margin: 0 1rem;
@@ -87,12 +94,13 @@
     }
     @include tablet {
       font-size: 2rem;
+      border-width: 4px;
     }
     @include desktop {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     @include desktop-big {
-      font-size: 4rem;
+      font-size: 3.5rem;
       margin: 2rem 0;
     }
     &:active {
@@ -112,7 +120,7 @@
       font-size: 2rem;
     }
     @include desktop-big {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 2rem 0;
     }
   }
@@ -133,4 +141,14 @@
 }
 .phrase-card {
   background-color: $darkest-green;
+  margin-bottom: 5rem;
+  @include mobile {
+    margin-bottom: 6rem;
+  }
+  @include tablet {
+    margin-bottom: 8rem;
+  }
+  @include desktop {
+    margin-bottom: 10rem;
+  }
 }

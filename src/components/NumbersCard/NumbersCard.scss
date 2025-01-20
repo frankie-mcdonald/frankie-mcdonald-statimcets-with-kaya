@@ -4,6 +4,11 @@
 .number-card {
   text-align: center;
   @include reset;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__div {
     @include flex-box($flex-direction: column, $align-items: center);
     cursor: pointer;
@@ -22,7 +27,9 @@
       font-size: 4rem;
     }
     @include desktop {
-      display: none;
+      // display: none;
+      width: 350px;
+      border: white solid 2px;
     }
   }
   &__body {
@@ -31,7 +38,6 @@
     margin-top: 2rem;
     @include tablet {
       font-size: 1rem;
-      // margin: 4rem;
     }
   }
   &__image {

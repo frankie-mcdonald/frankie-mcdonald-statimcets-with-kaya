@@ -17,14 +17,8 @@
       border-width: 3px;
     }
     @include desktop-big {
-      height: 1020px;
+      height: 1000px;
       background-repeat: no-repeat;
     }
   }
-}
-
-.back-icon {
-  margin: 1rem;
-  width: 3rem;
-  height: 3rem;
 }

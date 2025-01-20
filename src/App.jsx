@@ -1,10 +1,10 @@
-import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import NumbersPage from "./pages/NumbersPage/NumbersPage";
 import MainPage from "./pages/MainPage/MainPage";
 import LessonsPage from "./pages/LessonsPage/LessonsPage";
 import AlphabetPage from "./pages/AlphabetPage/AlphabetPage";
+
 function App() {
   return (
     <>
