@@ -7,16 +7,16 @@
   background-repeat: no-repeat;
   border-radius: 100%;
   background-color: $primary-white;
-  border: 2px solid $primary-black;
+  border: 0.125rem solid $primary-black;
   box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem rgba(255, 255, 255, 0.11);
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   @include mobile {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
   }
   @include tablet {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
   }
 }

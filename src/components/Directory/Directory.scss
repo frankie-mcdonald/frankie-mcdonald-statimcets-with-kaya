@@ -2,14 +2,14 @@
 @use "../../styles/partials/mixins" as *;
 .directory {
   background-color: $darkest-green;
-  border-bottom: 2px $primary-white solid;
+  border-bottom: 0.125rem $primary-white solid;
   @include flex-center($direction: column);
   &__button {
     font-family: "bcsans";
     color: $primary-black;
     width: 90vw;
     margin: 1rem 0;
-    border: #cdeade solid 4px;
+    border: #cdeade solid 0.25rem;
     text-align: center;
     padding: 1rem 2rem;
     border-radius: 1rem;
@@ -18,7 +18,7 @@
     box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
       0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
     &:active {
-      transform: translateY(3px) translateX(3px);
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
 }

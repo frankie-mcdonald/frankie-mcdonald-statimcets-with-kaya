@@ -5,18 +5,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 3.75rem;
   width: 100%;
-  border-bottom: white 0.25px solid;
+  border-bottom: white 0.0156rem solid;
   @include mobile {
-    height: 80px;
+    height: 5rem;
   }
   @include tablet {
-    height: 100px;
+    height: 6.25rem;
     padding: 1rem;
   }
   @include desktop {
-    height: 150px;
+    height: 9.375rem;
     padding: 2rem;
   }
 

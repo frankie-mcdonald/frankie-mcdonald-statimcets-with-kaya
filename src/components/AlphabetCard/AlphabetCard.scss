@@ -25,17 +25,17 @@
   }
 
   &__icon {
-    width: 10px;
+    width: 0.625rem;
     margin-right: 0.5rem;
     color: $primary-white;
     @include tablet {
-      width: 20px;
+      width: 1.25rem;
     }
     @include desktop {
-      width: 25px;
+      width: 1.5625rem;
     }
     @include desktop {
-      width: 40px;
+      width: 2.5rem;
     }
   }
   &__examples {
@@ -48,10 +48,10 @@
   }
   &__button {
     cursor: pointer;
-    border: $dark-turquoise solid 1px;
+    border: $dark-turquoise solid 0.0625rem;
     display: inline-block;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     margin-bottom: 1rem;
     background-color: $green;
     color: $primary-white;
@@ -78,7 +78,7 @@
       padding: 2rem 4rem;
     }
     &:active {
-      transform: translateY(2px) translateX(2px);
+      transform: translateY(0.125rem) translateX(0.125rem);
     }
     &:hover .alphabet-card__button:active {
       background-color: $light-green;
