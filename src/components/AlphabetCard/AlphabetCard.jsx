@@ -1,5 +1,4 @@
 import "./AlphabetCard.scss";
-import volume from "../../assets/icons/volume-black.png";
 import volumewhite from "../../assets/icons/volume.png";
 
 function AlphabetCard({ details }) {
@@ -35,7 +34,8 @@ function AlphabetCard({ details }) {
           </h3>
           <h3 className="alphabet-card__body">{details.exampleTranslation1}</h3>
         </div>
-        {/* <div className="alphabet-card__examples-div">
+
+        {/* <div className="alphabet-card__examples-div"> ///keeping this here for future examples. it was meant to have 3 for each letter.
           <h3
             className="alphabet-card__button"
             onClick={() => playAudio(details.audio2)}

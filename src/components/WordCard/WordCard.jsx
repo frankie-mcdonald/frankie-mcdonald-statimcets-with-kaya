@@ -32,13 +32,12 @@ function WordCard() {
     return <p>No data available.</p>;
   }
   const currentItem = randomWords[currentIndex];
-  // Play audio dynamically
   const playAudio = (audioUrl) => {
     const audio = new Audio(`${baseURL}${audioUrl}`);
     audio.play();
   };
   const nextWord = () => {
-    const nextIndex = Math.floor(Math.random() * randomWords.length); // Get a random index
+    const nextIndex = Math.floor(Math.random() * randomWords.length);
     setCurrentIndex(nextIndex);
   };
   return (
@@ -50,7 +49,7 @@ function WordCard() {
         <h1 className="word-card__heading">Random word!</h1>
         <div
           className="word-card__button"
-          onClick={() => playAudio(currentItem["word-audio"])} // Play word audio
+          onClick={() => playAudio(currentItem["word-audio"])}
         >
           <img src={volume} className="word-card__icon" alt="Play audio" />
           {currentItem.word}

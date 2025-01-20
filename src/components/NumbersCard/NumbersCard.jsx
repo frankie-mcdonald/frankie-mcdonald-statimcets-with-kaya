@@ -42,7 +42,7 @@ function NumbersCard() {
         <li key={number.id} className="number-card">
           <h3 className="number-card__title">{number.translation}</h3>
           <h4 className="number-card__body">
-            Click images to hear the pronunciation!!
+            Click image to hear the pronunciation!!
           </h4>
           <div
             onClick={() => playAudio(number.audio)}

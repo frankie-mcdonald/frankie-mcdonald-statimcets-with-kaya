@@ -1,7 +1,6 @@
 import "./GameCard.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavBar from "../NavBar/NavBar";
 
 function GameCard() {
   const baseURL = import.meta.env.VITE_API_URL;
@@ -17,13 +16,14 @@ function GameCard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [score, setScore] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     async function getQuizzes() {
       try {
         const response = await axios.get(`${baseURL}/quiz`);
         setQuiz(response.data);
-        console.log(response.data);
       } catch (err) {
         console.error("Error fetching quiz:", err);
         setError(err.message || "Failed to fetch quizzes.");
@@ -34,7 +34,6 @@ function GameCard() {
     getQuizzes();
   }, [baseURL]);
 
-  // Animation loop
   useEffect(() => {
     const interval = setInterval(() => {
       setFrameIndex((prevIndex) => (prevIndex + 1) % frameArray.length);
@@ -44,10 +43,23 @@ function GameCard() {
   }, []);
 
   const handleAnswerClick = (quizId, selectedOption) => {
+    if (selectedAnswers[quizId]) {
+      return;
+    }
+
     setSelectedAnswers((prev) => ({
       ...prev,
       [quizId]: selectedOption,
     }));
+
+    const question = quiz.find((item) => item.id === quizId);
+    if (selectedOption === question.answer) {
+      setScore((prevScore) => prevScore + 1);
+    }
+
+    if (Object.keys(selectedAnswers).length + 1 === quiz.length) {
+      setIsFinished(true);
+    }
   };
 
   if (loading) {
@@ -56,6 +68,20 @@ function GameCard() {
 
   if (error) {
     return <div>Error: {error}</div>;
+  }
+
+  if (isFinished) {
+    return (
+      <div className="score">
+        <h1 className="score__title">Quiz Finished!</h1>
+        <p className="score__body">
+          You scored {score} out of {quiz.length}.
+        </p>
+        <h4 className="score__button" onClick={() => window.location.reload()}>
+          Restart Quiz
+        </h4>
+      </div>
+    );
   }
 
   return (
@@ -105,7 +131,6 @@ function GameCard() {
           );
         })}
       </section>
-      <NavBar />
     </>
   );
 }

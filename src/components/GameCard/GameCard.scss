@@ -10,44 +10,66 @@
   &__container {
     background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
       url("../../assets/images/underwater.jpg");
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 55, 0.039),
+      0.25rem 0.2rem 0.2rem 0.2rem rgb(255, 255, 255, 0.2);
     background-position: center;
     background-size: cover;
-    border-radius: 30px;
-    margin: 1rem 0;
+    border-radius: 40px;
     border: white solid 2px;
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    @include desktop {
+      margin: 2rem 0;
+    }
   }
   &__animation-container {
     height: 120px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    @include mobile {
+      height: 150px;
+      margin-bottom: 4rem;
+    }
+    @include desktop {
+      height: 200px;
+      margin-bottom: 8rem;
+    }
+    @include desktop-big {
+      height: 400px;
+    }
   }
   &__animation {
-    width: 80px;
-    height: auto;
+    width: 90px;
     filter: brightness(150%);
+    @include mobile {
+      width: 120px;
+    }
+    @include tablet {
+      width: 160px;
+    }
+    @include desktop {
+      width: 240px;
+    }
+    @include desktop-big {
+      width: 390px;
+    }
   }
   &__title {
     font-size: 1rem;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     color: $primary-white;
+    @include mobile {
+      font-size: 2rem;
+    }
     @include tablet {
       font-size: 3rem;
+      padding: 2rem;
     }
     @include desktop {
-      font-size: 6rem;
-    }
-  }
-  &__image {
-    width: 80%;
-    @include tablet {
-      width: 60%;
-    }
-    @include desktop {
-      width: 50%;
+      font-size: 4rem;
     }
   }
   &__list {
@@ -57,12 +79,19 @@
     margin: 2rem 1rem;
     position: relative;
     bottom: -1.5rem;
+    justify-content: center;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop-big {
+      margin: 4rem 0;
+    }
   }
   &__item {
     @include reset;
     font-family: "bcsans";
     color: $primary-black;
-    border: #007947 solid 2px;
+    border: #f5fcf9 solid 3px;
     text-align: center;
     border-radius: 10px;
     font-size: 1.2rem;
@@ -78,6 +107,10 @@
     animation: buttonPop 1.5s ease-out forwards;
     cursor: pointer;
 
+    &:active {
+      transform: translateY(3px) translateX(3px);
+      background-color: rgb(255, 255, 255);
+    }
     &.selected {
       background-color: rgb(169, 20, 20);
       border: rgb(171, 27, 27) 2px solid;
@@ -87,18 +120,6 @@
       background-color: $green;
       border: white solid 1px;
       color: $primary-white;
-    }
-    @include tablet {
-      width: 240px;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      font-size: 2rem;
-    }
-    @include desktop {
-      width: 250px;
-    }
-    &:active {
-      transform: translateY(3px) translateX(3px);
     }
     &::before {
       content: "";
@@ -125,6 +146,72 @@
       transition: opacity 0.9s ease-in-out;
       border-radius: 20px;
       opacity: 0.6;
+    }
+    @include mobile {
+      width: 300px;
+    }
+    @include tablet {
+      width: 240px;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+    }
+    @include desktop {
+      width: 250px;
+    }
+  }
+}
+.score {
+  color: $primary-white;
+  width: 60%;
+  padding-bottom: 100vh;
+  padding-top: 6rem;
+  border-top: white 0.5px solid;
+  @include tablet {
+    padding-top: 8rem;
+  }
+  &__title {
+    margin-bottom: 2rem;
+    @include tablet {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+  &__body {
+    margin: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+      margin: 2.5rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+      margin: 4rem;
+    }
+  }
+  &__button {
+    background-color: $primary-white;
+    border: $light-green 1px solid;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    color: black;
+    display: inline-block;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(30, 255, 0, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.2);
+
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+      padding: 1.5rem 3rem;
+      border-width: 3px;
+    }
+    &:active {
+      transform: translateY(3px) translateX(3px);
     }
   }
 }

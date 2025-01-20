@@ -2,7 +2,7 @@ import "./NavBar.scss";
 import KayaLogo from "../KayaLogo/KayaLogo";
 import abcIcon from "../../assets/icons/abc-icon-white.png";
 import numberIcon from "../../assets/icons/numbers-icon-white.png";
-import lessonsIcon from "../../assets/icons/lessons.png";
+import lessonsIcon from "../../assets/icons/book.png";
 import { NavLink } from "react-router-dom";
 function NavBar() {
   return (

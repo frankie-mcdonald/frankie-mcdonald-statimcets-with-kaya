@@ -9,14 +9,13 @@ function AlphabetPage() {
   const baseURL = import.meta.env.VITE_API_URL;
   const [alphabet, setAlphabet] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedLetterData, setSelectedLetterData] = useState(null); // State for selected letter object
+  const [selectedLetterData, setSelectedLetterData] = useState(null);
 
   useEffect(() => {
     async function getAlphabet() {
       try {
         const response = await axios.get(`${baseURL}/alphabet`);
         setAlphabet(response.data);
-        // console.log(response.data);
       } catch (error) {
         console.log("Error fetching alphabet", error);
       } finally {
