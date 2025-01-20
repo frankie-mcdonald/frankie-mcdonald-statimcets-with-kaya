@@ -1,0 +1,93 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.number-card {
+  text-align: center;
+  @include reset;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__div {
+    @include flex-box($flex-direction: column, $align-items: center);
+    cursor: pointer;
+  }
+  &__title {
+    font-size: 2rem;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
+      url("../../assets/images/into_the_water.jpg");
+    width: 100vw;
+    color: $primary-white;
+    border-top: $dark-turquoise 0.3125rem solid;
+    -webkit-text-stroke: 0.0313rem rgb(72, 81, 81);
+    @include tablet {
+      font-size: 4rem;
+    }
+    @include desktop {
+      width: 21.875rem;
+      border: white solid 0.125rem;
+    }
+  }
+  &__body {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 2rem;
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+  &__image {
+    width: 80%;
+    border-radius: 3.125rem;
+    border: $primary-white 0.1875rem solid;
+    margin-top: 2.2rem;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(248, 248, 248, 0.039),
+      0.25rem 0.25rem 0.25rem 0.25rem rgb(255, 255, 255, 0.2);
+    @include tablet {
+      width: 37.5rem;
+      margin-top: 4rem;
+    }
+    @include desktop {
+      width: 21.875rem;
+      margin: 2rem;
+    }
+    &:active {
+      box-shadow: 0 0.3125rem #666;
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+  &__icon {
+    width: 1.875rem;
+    position: relative;
+    top: -4rem;
+    right: -3rem;
+    @include mobile {
+      width: 2.5rem;
+      top: -5rem;
+    }
+    @include tablet {
+      width: 4.375rem;
+      right: -6rem;
+      top: -8rem;
+    }
+    @include desktop {
+      width: 2.5rem;
+      right: -5rem;
+      top: -7rem;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+}
+.numbers__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop-big {
+    margin: 0 15rem;
+  }
+}

@@ -1,0 +1,54 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.lessons {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rem;
+  text-align: center;
+  &__title {
+    color: $primary-white;
+  }
+  &__button {
+    color: $primary-white;
+    font-size: 1rem;
+    border: $light-green solid 0.0625rem;
+    border-radius: 2.5rem;
+    padding: 1rem 3rem;
+    background-color: $primary-black;
+    margin: 2rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 55, 0.039),
+      0.25rem 0.2rem 0.2rem 0.2rem rgb(255, 255, 255, 0.2);
+    @include tablet {
+      margin: 0 0 2rem 0;
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+      padding: 0.75rem 4rem;
+      border-radius: 2.5rem;
+      margin: 3rem;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+  &__body {
+    color: $primary-white;
+    font-size: 0.75rem;
+    padding: 1rem 0 0 0;
+    @include tablet {
+      font-size: 1rem;
+      padding: 2rem 0;
+    }
+    @include desktop {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none !important;
+}

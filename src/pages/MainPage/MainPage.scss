@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.main {
+  &__hero {
+    background-image: url("../../assets/images/statimc-with-kaya-title.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 12.5rem;
+    border-bottom: 0.0156rem $primary-white solid;
+    @include tablet {
+      height: 21.875rem;
+      border-width: 0.0625rem;
+    }
+    @include desktop {
+      height: 43.75rem;
+      border-width: 0.1875rem;
+    }
+    @include desktop-big {
+      height: 62.5rem;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.alphabet {
+  text-align: center;
+  background-color: #dce6dd;
+  padding-bottom: 20rem;
+  @include mobile {
+    padding: 2rem 1rem 30rem 1rem;
+  }
+  @include tablet {
+    padding: 2rem 2rem 30rem 2rem;
+  }
+  @include desktop {
+    padding: 2rem 2rem 35rem 2rem;
+  }
+  @include desktop-big {
+    padding: 2rem 15rem 45rem 15rem;
+  }
+  &__header {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-image: url("../../assets/images/nahani-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.0313rem rgb(0, 19, 11);
+    @include tablet {
+      padding: 2rem 0;
+      font-size: 3rem;
+      -webkit-text-stroke: 0.0469rem rgb(0, 19, 11);
+    }
+    @include desktop {
+      padding: 4rem 0;
+      font-size: 5rem;
+      -webkit-text-stroke: 0.0625rem rgb(0, 0, 0);
+    }
+    @include desktop-big {
+      padding: 5rem 0;
+      font-size: 6rem;
+    }
+  }
+  &__subheader {
+    font-size: 0.75rem;
+    color: $green;
+    padding: 1rem 0 0.5rem 0;
+    text-decoration: underline;
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+    @include desktop-big {
+      font-size: 2rem;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $primary-white;
+    border: #35270c solid 0.0625rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem rgba(0, 0, 255, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(93, 68, 18, 0.2);
+    align-content: center;
+    margin: 0.25rem;
+    font-size: 1rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    @include mobile {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+    @include desktop {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2rem;
+      border-radius: 0.9375rem;
+    }
+    @include desktop-big {
+      width: 6.25rem;
+      height: 6.25rem;
+      font-size: 3rem;
+      margin: 0.75rem;
+    }
+    &:active {
+      transform: translateY(0.125rem) translateX(0.125rem);
+    }
+    &:hover {
+      background-color: #b8c6b0;
+    }
+  }
+}

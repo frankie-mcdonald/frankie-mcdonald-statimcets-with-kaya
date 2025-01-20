@@ -1,0 +1,22 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.logo {
+  background-image: url("../../assets/images/kaya.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-color: $primary-white;
+  border: 0.125rem solid $primary-black;
+  box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem rgba(255, 255, 255, 0.11);
+  width: 1.875rem;
+  height: 1.875rem;
+  @include mobile {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  @include tablet {
+    width: 5rem;
+    height: 5rem;
+  }
+}

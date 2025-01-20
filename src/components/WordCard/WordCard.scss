@@ -1,0 +1,154 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.random-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $dark-forest-green;
+}
+.word-card {
+  background-color: $dark-forest-green;
+  @include flex-center($direction: column);
+  color: white;
+  width: 100%;
+  border-bottom: 0.0156rem $primary-white solid;
+  text-align: center;
+  @include tablet {
+    border-width: 0.0625rem;
+  }
+  @include desktop {
+    border-width: 0.1875rem;
+  }
+  &__next {
+    color: $primary-white;
+    padding: 0.5rem;
+    margin: 1rem 8rem 0.5rem 8rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    border: $primary-black solid 0.125rem;
+    border-radius: 3.125rem;
+    font-family: "nunito";
+    font-weight: bold;
+    width: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 255, 0, 0.246);
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(248, 248, 248, 0.039);
+    font-size: 0.75rem;
+    @include mobile {
+      width: 45%;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-width: 0.1875rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+    @include desktop-big {
+      font-size: 2.8rem;
+      padding: 1rem;
+      width: 40%;
+      margin: 3rem 0;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+  &__heading {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    @include mobile {
+      font-size: 2rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+      padding: 1.5rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+    }
+    @include desktop-big {
+      font-size: 5rem;
+    }
+  }
+  &__button {
+    display: flex;
+    color: $primary-black;
+    border: $dark-turquoise solid 0.125rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    background-color: $primary-white;
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(1, 255, 128, 0.156),
+      0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 255, 191, 0.2);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    @include mobile {
+      font-size: 1.5rem;
+      padding: 1rem 1rem;
+    }
+    @include tablet {
+      font-size: 2rem;
+      border-width: 0.25rem;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+    }
+    @include desktop-big {
+      font-size: 3.5rem;
+      margin: 2rem 0;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+  &__body {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    @include mobile {
+      font-size: 1.1rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+    @include desktop-big {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+  }
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    @include tablet {
+      width: 1.5625rem;
+      height: 1.5625rem;
+      margin-right: 1rem;
+    }
+    @include desktop {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+  }
+}
+.phrase-card {
+  background-color: $darkest-green;
+  margin-bottom: 5rem;
+  @include mobile {
+    margin-bottom: 6rem;
+  }
+  @include tablet {
+    margin-bottom: 8rem;
+  }
+  @include desktop {
+    margin-bottom: 10rem;
+  }
+}
