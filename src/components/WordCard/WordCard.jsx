@@ -42,9 +42,9 @@ function WordCard() {
   };
   return (
     <section className="random-card">
-      <button className="word-card__next" onClick={nextWord}>
+      <h1 className="word-card__next" onClick={nextWord}>
         Click here to genrate new word and phrase!
-      </button>
+      </h1>
       <div className="word-card">
         <h1 className="word-card__heading">Random word!</h1>
         <div

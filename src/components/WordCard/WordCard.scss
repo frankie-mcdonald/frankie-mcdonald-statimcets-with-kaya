@@ -20,13 +20,14 @@
     border-width: 0.1875rem;
   }
   &__next {
+    @include glow-button;
     color: $primary-white;
     padding: 0.5rem;
     margin: 1rem 8rem 0.5rem 8rem;
     text-align: center;
     align-items: center;
     align-content: center;
-    border: $primary-black solid 0.125rem;
+    border: $green solid 0.125rem;
     border-radius: 3.125rem;
     font-family: "nunito";
     font-weight: bold;
@@ -54,9 +55,6 @@
       width: 40%;
       margin: 3rem 0;
     }
-    &:active {
-      transform: translateY(0.1875rem) translateX(0.1875rem);
-    }
   }
   &__heading {
     font-size: 1.5rem;
@@ -76,14 +74,16 @@
     }
   }
   &__button {
+    @include glow-button;
+    font-family: "Bcsans", "sans-serif";
     display: flex;
-    color: $primary-black;
-    border: $dark-turquoise solid 0.125rem;
+    color: $primary-white;
+    border: $green solid 0.125rem;
     text-align: center;
     border-radius: 1rem;
     margin: 0 1rem;
     cursor: pointer;
-    background-color: $primary-white;
+    background-color: $light-green;
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(1, 255, 128, 0.156),
       0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 255, 191, 0.2);
     font-size: 1rem;
@@ -102,6 +102,9 @@
     @include desktop-big {
       font-size: 3.5rem;
       margin: 2rem 0;
+    }
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);

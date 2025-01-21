@@ -51,7 +51,6 @@ function LandingPage() {
       <NavLink to={"/main"}>
         <button className="landing__button">Click to learn!!!</button>
       </NavLink>
-
       <footer className="landing__footer">
         <div className="landing__image-div">
           <p className="landing__text">

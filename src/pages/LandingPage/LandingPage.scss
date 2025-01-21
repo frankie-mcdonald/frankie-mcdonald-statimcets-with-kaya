@@ -57,54 +57,9 @@ body {
     }
   }
   &__button {
-    padding: 0.3125rem 1.875rem;
-    margin-bottom: 1rem;
-    border: 0.125rem solid #334a38;
-    color: $primary-white;
-    background-color: $darkest-green;
-    -webkit-text-stroke: 0.0313rem rgb(5, 12, 12);
-    font-family: "Poppins", sans-serif;
-    font-weight: bolder;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 3.125rem;
-    animation: buttonPop 1.5s ease-out forwards;
-    @include tablet {
-      padding: 1.25rem 6.25rem;
-      font-size: 1.5rem;
-      margin: 5rem 0;
-    }
-    @include desktop {
-      margin: 20rem 0 5rem 0;
-      font-size: 3rem;
-    }
+    @include glow-button;
   }
-  &__button::before {
-    content: "";
-    background: linear-gradient(
-      45deg,
-      $primary-black,
-      $dark-forest-green,
-      $mid-forest-green,
-      $light-green,
-      $green,
-      $dark-turquoise,
-      $mid-forest-green,
-      $darkest-green
-    );
-    position: absolute;
-    top: -0.125rem;
-    left: -0.125rem;
-    background-size: 1000%;
-    z-index: -1;
-    width: calc(100% + 0.5rem);
-    height: calc(100% + 0.3125rem);
-    filter: blur(10px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 3.125rem;
-    opacity: 1;
-  }
+
   &__intro-container {
     display: flex;
     justify-content: center;
@@ -128,7 +83,6 @@ body {
       position: absolute;
       width: calc(100% + 8px);
       right: 0.5rem;
-      animation: typing 5s steps(14) infinite;
     }
   }
   &__image {
@@ -156,32 +110,6 @@ body {
       font-size: 2rem;
       padding: 4rem 0;
     }
-  }
-}
-
-@keyframes buttonPop {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 150% 0;
-  }
-  100% {
-    background-position: 0 0;
   }
 }
 
