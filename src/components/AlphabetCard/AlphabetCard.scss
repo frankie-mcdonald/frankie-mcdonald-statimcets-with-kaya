@@ -82,6 +82,7 @@
     }
     &:hover .alphabet-card__button:active {
       background-color: $light-green;
+      transform: translateY(0.125rem) translateX(0.125rem);
     }
   }
   &__body {
