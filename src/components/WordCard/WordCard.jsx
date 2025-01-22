@@ -1,5 +1,5 @@
 import "./WordCard.scss";
-import volume from "../../assets/icons/volume-black.png";
+import volume from "../../assets/icons/volume.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
 

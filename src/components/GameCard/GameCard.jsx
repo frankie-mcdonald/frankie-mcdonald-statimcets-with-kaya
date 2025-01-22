@@ -1,6 +1,7 @@
 import "./GameCard.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Kaya from "../../assets/images/kaya.png";
 
 function GameCard() {
   const baseURL = import.meta.env.VITE_API_URL;
@@ -42,6 +43,12 @@ function GameCard() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (isFinished) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [isFinished]);
+
   const handleAnswerClick = (quizId, selectedOption) => {
     if (selectedAnswers[quizId]) {
       return;
@@ -73,13 +80,25 @@ function GameCard() {
   if (isFinished) {
     return (
       <div className="score">
-        <h1 className="score__title">Quiz Finished!</h1>
-        <p className="score__body">
-          You scored {score} out of {quiz.length}.
-        </p>
-        <h4 className="score__button" onClick={() => window.location.reload()}>
-          Restart Quiz
-        </h4>
+        <div className="score__div">
+          {" "}
+          <h1 className="score__title">Quiz Finished!</h1>
+          <p className="score__body">
+            You scored {score} out of {quiz.length}.
+          </p>
+          <h4
+            className="score__button"
+            onClick={() => window.location.reload()}
+          >
+            Restart Quiz
+          </h4>
+        </div>
+        <div className="score__kaya">
+          <img src={Kaya} alt="Kaya" className="score__image" />
+          <h5 className="score__text">
+            {score >= 5 ? "Good Job!!" : "Maybe next time!"}
+          </h5>
+        </div>
       </div>
     );
   }

@@ -58,6 +58,12 @@ body {
   }
   &__button {
     @include glow-button;
+    color: white;
+    border: $green 2px solid;
+    background-color: $green;
+    border-radius: 4rem;
+    padding: 0.5rem 1rem;
+    margin: 2.5rem 0;
   }
 
   &__intro-container {

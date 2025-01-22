@@ -11,15 +11,15 @@
     color: $primary-white;
   }
   &__button {
+    @include glow-button;
     color: $primary-white;
+    -webkit-text-stroke: 0.04rem rgb(0, 0, 0);
     font-size: 1rem;
-    border: $light-green solid 0.0625rem;
+    border: $dark-forest-green solid 0.2rem;
     border-radius: 2.5rem;
     padding: 1rem 3rem;
     background-color: $primary-black;
     margin: 2rem 0;
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 55, 0.039),
-      0.25rem 0.2rem 0.2rem 0.2rem rgb(255, 255, 255, 0.2);
     @include tablet {
       margin: 0 0 2rem 0;
       font-size: 2rem;

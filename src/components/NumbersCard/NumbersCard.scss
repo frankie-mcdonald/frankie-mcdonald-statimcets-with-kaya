@@ -15,6 +15,7 @@
   }
   &__title {
     font-size: 2rem;
+    margin-bottom: 3rem;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
@@ -27,14 +28,18 @@
       font-size: 4rem;
     }
     @include desktop {
-      width: 21.875rem;
+      width: 30rem;
       border: white solid 0.125rem;
+    }
+    @include desktop-big {
+      width: 45rem;
     }
   }
   &__body {
+    @include animated-outline;
     font-size: 0.75rem;
     text-align: center;
-    margin-top: 2rem;
+    display: inline;
     @include tablet {
       font-size: 1rem;
     }
@@ -51,8 +56,11 @@
       margin-top: 4rem;
     }
     @include desktop {
-      width: 21.875rem;
+      width: 30rem;
       margin: 2rem;
+    }
+    @include desktop-big {
+      width: 45rem;
     }
     &:active {
       box-shadow: 0 0.3125rem #666;
@@ -74,9 +82,12 @@
       top: -8rem;
     }
     @include desktop {
-      width: 2.5rem;
-      right: -5rem;
-      top: -7rem;
+      width: 4rem;
+      right: -8rem;
+      top: -11rem;
+    }
+    @include desktop-big {
+      width: 5rem;
     }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
@@ -88,6 +99,6 @@
   flex-wrap: wrap;
   justify-content: center;
   @include desktop-big {
-    margin: 0 15rem;
+    margin: 0 5rem;
   }
 }

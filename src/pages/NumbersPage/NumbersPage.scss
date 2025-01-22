@@ -94,6 +94,7 @@
     }
   }
   &__button {
+    @include animated-outline;
     color: $primary-white;
     border: $light-green solid 0.0625rem;
     border-radius: 1.875rem;

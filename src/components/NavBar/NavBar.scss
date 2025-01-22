@@ -57,7 +57,10 @@
       font-size: 2rem;
     }
     @include desktop {
-      font-size: 2rem;
+      font-size: 3rem;
+    }
+    @include desktop-big {
+      font-size: 4rem;
     }
   }
   &__login {
@@ -72,7 +75,10 @@
       transform: translateY(0.125rem) translateX(0.125rem);
     }
     @include desktop {
-      padding: 0.5rem 1rem;
+      padding: 1rem 2rem;
+    }
+    @include desktop-big {
+      padding: 1.2rem 2.2rem;
     }
   }
 }
