@@ -47,10 +47,14 @@ function AlphabetPage() {
       <Header />
       <h1 className="alphabet__header">St̓át̓imcets Alphabet</h1>
       <section className="alphabet">
-        {selectedLetterData && <AlphabetCard details={selectedLetterData} />}
-        <h2 className="alphabet__subheader">
-          Click a letter to hear the pronunciation
-        </h2>
+        {" "}
+        <div className="alphabet__flex">
+          {" "}
+          {selectedLetterData && <AlphabetCard details={selectedLetterData} />}
+          <h2 className="alphabet__subheader">
+            Click a letter to hear the pronunciation
+          </h2>
+        </div>
         <ul className="alphabet__list">
           {alphabet.map((item) => (
             <li

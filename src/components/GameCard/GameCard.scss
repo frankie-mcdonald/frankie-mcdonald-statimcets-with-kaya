@@ -7,6 +7,10 @@
   text-align: center;
   margin-bottom: 10rem;
 
+  @include desktop {
+    margin: 2rem;
+  }
+
   &__container {
     background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
       url("../../assets/images/underwater.jpg");
@@ -23,22 +27,23 @@
     align-items: center;
     margin: 1rem 0;
     @include desktop {
-      margin: 2rem 0;
+      margin: 2rem 0 10rem 0;
+      width: 75%;
+    }
+    @include desktop-big {
+      padding: 0 7rem;
     }
   }
   &__animation-container {
-    height: 7.5rem;
+    height: 9rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     @include mobile {
-      height: 9.375rem;
+      height: 11rem;
       margin-bottom: 4rem;
     }
     @include desktop {
-      height: 12.5rem;
-      margin-bottom: 8rem;
-    }
-    @include desktop-big {
-      height: 25rem;
+      height: 8rem;
     }
   }
   &__animation {
@@ -54,7 +59,7 @@
       width: 15rem;
     }
     @include desktop-big {
-      width: 24.375rem;
+      width: 18rem;
     }
   }
   &__title {
@@ -78,97 +83,102 @@
     flex-wrap: wrap;
     margin: 2rem 1rem;
     position: relative;
-    bottom: -1.5rem;
+    padding-bottom: -1.5rem;
     justify-content: center;
     @include tablet {
       flex-direction: row;
+      justify-content: space-evenly;
+    }
+    @include tablet-landscape {
+      margin: 2rem 4rem;
+    }
+    @include desktop {
+      padding: 18rem 0 0 0;
     }
     @include desktop-big {
-      margin: 4rem 0;
+      margin: 3rem 8rem;
     }
   }
   &__item {
-    @include reset;
     font-family: "bcsans";
-    color: $primary-black;
-    border: #f5fcf9 solid 0.1875rem;
+    color: $primary-white;
+    -webkit-text-stroke: 0.04rem rgb(0, 0, 0);
+    border: black solid 0.1875rem;
     text-align: center;
     border-radius: 0.625rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: $primary-white;
+    background-color: black;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 225, 0.2);
     width: 15.625rem;
-    margin-bottom: 0.75rem;
     position: relative;
     z-index: 1;
     padding: 0.5rem 0;
     animation: buttonPop 1.5s ease-out forwards;
     cursor: pointer;
+    @include reset;
+    @include animated-outline;
+    margin: 0.5rem;
+    @include mobile {
+      width: 22rem;
+      margin: 0.45rem;
+      font-size: 1.8rem;
+    }
+    @include tablet {
+      margin: 0.5rem;
+      width: 15.625rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+      margin: 3rem 1rem 0 0;
+      padding: 1rem;
 
+      border-radius: 0.8rem;
+    }
+    @include desktop-big {
+      width: 40rem;
+      font-size: 4rem;
+    }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
-      background-color: rgb(255, 255, 255);
     }
     &.selected {
-      background-color: rgb(255, 0, 0);
-      border: rgb(255, 0, 0) 0.125rem solid;
-      color: $primary-white;
+      @include animated-outline(
+        linear-gradient(
+          90deg,
+          rgb(141, 18, 18),
+          rgb(119, 29, 23),
+          rgb(32, 3, 3),
+          rgb(144, 9, 9)
+        )
+      );
+
+      border: rgb(65, 9, 9) 0.225rem solid;
+      color: white;
+      box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(209, 7, 7, 0.039),
+        0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 0, 0, 0.2);
     }
     &.correct {
       background-color: $green;
-      border: rgb(0, 255, 38) solid 0.0625rem;
+      border: rgb(68, 255, 96) solid 0.225rem;
       color: $primary-white;
-    }
-    &::before {
-      content: "";
-      background: linear-gradient(
-        45deg,
-        #58a65b,
-        $green,
-        $mid-forest-green,
-        $light-green,
-        $green,
-        $dark-turquoise,
-        $light-green,
-        $darkest-green
-      );
-      position: absolute;
-      top: -0.125rem;
-      left: -0.125rem;
-      background-size: 400%;
-      z-index: -1;
-      width: calc(100% + 8px);
-      height: calc(100% + 5px);
-      filter: blur(0.8125rem);
-      animation: glowing 10s linear infinite;
-      transition: opacity 0.9s ease-in-out;
-      border-radius: 1.25rem;
-      opacity: 0.6;
-    }
-    @include mobile {
-      width: 18.75rem;
-    }
-    @include tablet {
-      width: 15rem;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      font-size: 2rem;
-    }
-    @include desktop {
-      width: 15.625rem;
     }
   }
 }
 .score {
   color: $primary-white;
   width: 60%;
-  padding-bottom: 100vh;
-  padding-top: 6rem;
+  background-color: black;
+  padding-top: 3rem;
   border-top: white 0.0313rem solid;
+  @include mobile {
+    width: 70%;
+  }
   @include tablet {
-    padding-top: 8rem;
+  }
+  @include desktop {
+    width: 55%;
   }
   &__title {
     margin-bottom: 2rem;
@@ -176,8 +186,12 @@
       font-size: 3rem;
       margin-bottom: 3rem;
     }
+    @include tablet-landscape {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
     @include desktop {
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
   &__body {
@@ -186,8 +200,12 @@
       font-size: 1.5rem;
       margin: 2.5rem;
     }
+    @include tablet-landscape {
+      font-size: 1rem;
+      margin: 01.5rem;
+    }
     @include desktop {
-      font-size: 3rem;
+      font-size: 2rem;
       margin: 4rem;
     }
   }
@@ -195,7 +213,7 @@
     background-color: $primary-white;
     border: $light-green 0.0625rem solid;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.75rem;
+    border-radius: 4rem;
     color: black;
     display: inline-block;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(30, 255, 0, 0.039),
@@ -204,9 +222,10 @@
     @include tablet {
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
+      margin-bottom: 0;
     }
     @include desktop {
-      font-size: 4rem;
+      font-size: 2rem;
       padding: 1.5rem 3rem;
       border-width: 0.1875rem;
     }
@@ -214,29 +233,67 @@
       transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
+  &__kaya {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    @include tablet {
+      justify-content: space-around;
+    }
+    @include tablet-landscape {
+      position: relative;
+      top: -5rem;
+    }
+    @include desktop {
+      position: static;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    @include mobile {
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+    }
+    @include tablet-landscape {
+      font-size: 2.5rem;
+    }
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+  &__image {
+    width: 8.125rem;
+    animation: moveUpDown 2s ease-in-out;
+    @include mobile {
+      width: 12.5rem;
+    }
+    @include tablet {
+      width: 18rem;
+    }
+    @include tablet-landscape {
+      width: 14rem;
+    }
+    @include desktop {
+      width: 25rem;
+    }
+    @include desktop-big {
+      width: 20rem;
+    }
+  }
 }
-@keyframes buttonPop {
+@keyframes moveUpDown {
   0% {
-    transform: scale(0.8);
+    transform: translateY(62.5rem);
     opacity: 0;
   }
-  50% {
-    transform: scale(1.02);
+  80% {
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 150% 0;
-  }
-  100% {
-    background-position: 0 0;
+    transform: translateY(0.125rem);
   }
 }

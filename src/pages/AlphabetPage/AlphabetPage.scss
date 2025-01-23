@@ -5,6 +5,10 @@
   text-align: center;
   background-color: #dce6dd;
   padding-bottom: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include mobile {
     padding: 2rem 1rem 30rem 1rem;
   }
@@ -13,9 +17,14 @@
   }
   @include desktop {
     padding: 2rem 2rem 35rem 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    margin: 0 1rem;
   }
   @include desktop-big {
     padding: 2rem 15rem 45rem 15rem;
+    align-items: baseline;
   }
   &__header {
     font-size: 2rem;
@@ -95,6 +104,7 @@
     }
     &:hover {
       background-color: #b8c6b0;
+      transform: translateY(0.125rem) translateX(0.125rem);
     }
   }
 }
