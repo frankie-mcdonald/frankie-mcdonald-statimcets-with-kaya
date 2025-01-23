@@ -1,6 +1,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
+.alphabet__words {
+  margin: 1rem;
+  padding-top: 12rem;
+}
 .alphabet-card {
   display: flex;
   flex-direction: column;

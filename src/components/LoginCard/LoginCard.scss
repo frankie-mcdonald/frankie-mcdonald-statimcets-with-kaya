@@ -4,13 +4,15 @@
 .form {
   background-color: #bdccba;
   border-radius: 1.6rem;
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 0.5rem;
   display: flex;
   color: $dark-forest-green;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 3rem;
+  margin: 6rem 3rem;
+  text-align: center;
+  width: 70%;
   border: $green 5px solid;
   box-shadow: 1rem 1rem 1rem 1rem rgba(255, 255, 255, 0.039),
     0.1rem 0.1rem 0.1rem 0.1rem rgba(214, 255, 229, 0.2);

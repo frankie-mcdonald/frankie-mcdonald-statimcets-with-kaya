@@ -1,6 +1,6 @@
 import "./LoginCard.scss";
 
-function LoginCard() {
+function LoginCard({ onLogin }) {
   return (
     <form className="form">
       <div className="form__input-section">
@@ -14,7 +14,9 @@ function LoginCard() {
         <input className="form__input" type="password" />
       </div>
       <h6 className="form__body">Forgot Password?</h6>
-      <h3 className="form__button">Login</h3>
+      <h3 className="form__button" onClick={onLogin}>
+        Login
+      </h3>
       <h5 className="form__text">Sign up /Register here</h5>
     </form>
   );

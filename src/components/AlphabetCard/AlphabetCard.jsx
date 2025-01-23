@@ -12,7 +12,7 @@ function AlphabetCard({ details }) {
     });
   };
   return (
-    <>
+    <div className="alphabet__words">
       <section className="alphabet-card">
         <h1 className="alphabet-card__heading">{details.letter} </h1>
       </section>
@@ -62,7 +62,7 @@ function AlphabetCard({ details }) {
           <h3 className="alphabet-card__body">{details.exampleTranslation3}</h3>
         </div> */}
       </section>
-    </>
+    </div>
   );
 }
 

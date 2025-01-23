@@ -8,5 +8,9 @@
   background-size: cover;
   height: 120vh;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
   background-repeat: repeat-y;
+  align-items: center;
+  width: 100%;
 }
