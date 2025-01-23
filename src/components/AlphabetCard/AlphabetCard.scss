@@ -49,30 +49,25 @@
   &__button {
     cursor: pointer;
     border: $dark-turquoise solid 0.0625rem;
-    display: inline-block;
+    @include animated-outline;
     padding: 0.5rem 1rem;
-    border-radius: 1.25rem;
+    border-radius: 4rem;
     margin-bottom: 1rem;
-    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $green;
     color: $primary-white;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 255, 0.039),
       0.2rem 0.2rem 0.2rem 0.2rem rgba(93, 68, 18, 0.2);
     font-size: 1rem;
     font-weight: 200;
-    @include animated-outline;
-    &:hover {
-      background-color: $light-green;
-      transform: translateY(0.1rem) translateX(0.1rem);
-    }
-    &:active {
-      transform: translateY(0.21rem) translateX(0.21rem);
-    }
-
+    width: 10rem;
     @include mobile {
       font-size: 1.5rem;
     }
     @include tablet {
+      width: 20rem;
       font-size: 2rem;
       margin-bottom: 1.5rem;
       padding: 0.75rem 2rem;
@@ -86,6 +81,13 @@
       font-size: 3rem;
       margin-bottom: 3rem;
       padding: 2rem 4rem;
+    }
+    &:hover {
+      background-color: $light-green;
+      transform: translateY(0.1rem) translateX(0.1rem);
+    }
+    &:active {
+      transform: translateY(0.21rem) translateX(0.21rem);
     }
   }
   &__body {

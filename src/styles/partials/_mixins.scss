@@ -63,19 +63,11 @@
   color: $primary-white;
   border-radius: $border-radius;
   font-size: $font-size;
-  padding: 0.3125rem 1.875rem;
   border: 0.125rem solid #334a38;
   -webkit-text-stroke: 0.0313rem rgb(5, 12, 12);
   cursor: pointer;
   animation: buttonPop 1.5s ease-out forwards;
-  @include tablet {
-    padding: 1.25rem 6.25rem;
-    font-size: 1.5rem;
-  }
-  @include desktop {
-    margin: 20rem 0 5rem 0;
-    font-size: 3rem;
-  }
+
   &:hover {
     transform: translateY(0.1875rem) translateX(0.1875rem);
   }
@@ -148,7 +140,6 @@
 ) {
   position: relative;
   z-index: 0;
-
   &::after {
     content: "";
     position: absolute;
@@ -163,12 +154,12 @@
     z-index: -1;
     animation: outlineAnimation 3s linear infinite;
   }
-  @keyframes outlineAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
+}
+@keyframes outlineAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

@@ -6,8 +6,9 @@
   align-items: center;
   text-align: center;
   margin-bottom: 10rem;
+
   @include desktop {
-    margin-bottom: 22rem;
+    margin: 2rem;
   }
 
   &__container {
@@ -26,22 +27,23 @@
     align-items: center;
     margin: 1rem 0;
     @include desktop {
-      margin: 2rem 0;
+      margin: 2rem 0 10rem 0;
+      width: 75%;
+    }
+    @include desktop-big {
+      padding: 0 7rem;
     }
   }
   &__animation-container {
     height: 9rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     @include mobile {
       height: 11rem;
       margin-bottom: 4rem;
     }
     @include desktop {
-      height: 12.5rem;
-      margin-bottom: 8rem;
-    }
-    @include desktop-big {
-      height: 25rem;
+      height: 8rem;
     }
   }
   &__animation {
@@ -57,7 +59,7 @@
       width: 15rem;
     }
     @include desktop-big {
-      width: 24.375rem;
+      width: 18rem;
     }
   }
   &__title {
@@ -90,14 +92,14 @@
     @include tablet-landscape {
       margin: 2rem 4rem;
     }
-
+    @include desktop {
+      padding: 18rem 0 0 0;
+    }
     @include desktop-big {
-      margin: 4rem 0;
+      margin: 3rem 8rem;
     }
   }
   &__item {
-    @include reset;
-    @include animated-outline();
     font-family: "bcsans";
     color: $primary-white;
     -webkit-text-stroke: 0.04rem rgb(0, 0, 0);
@@ -110,28 +112,32 @@
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 255, 225, 0.2);
     width: 15.625rem;
-    margin: 0.5rem;
     position: relative;
     z-index: 1;
     padding: 0.5rem 0;
     animation: buttonPop 1.5s ease-out forwards;
     cursor: pointer;
+    @include reset;
+    @include animated-outline;
+    margin: 0.5rem;
     @include mobile {
       width: 22rem;
+      margin: 0.45rem;
+      font-size: 1.8rem;
     }
     @include tablet {
       margin: 0.5rem;
       width: 15.625rem;
     }
     @include desktop {
-      font-size: 3rem;
-      margin: 3rem 2rem 0 2rem;
+      font-size: 2rem;
+      margin: 3rem 1rem 0 0;
       padding: 1rem;
-      width: 40rem;
+
       border-radius: 0.8rem;
     }
     @include desktop-big {
-      width: 33rem;
+      width: 40rem;
       font-size: 4rem;
     }
     &:active {
@@ -163,13 +169,13 @@
 .score {
   color: $primary-white;
   width: 60%;
-  padding: 3rem 0;
+  background-color: black;
+  padding-top: 3rem;
   border-top: white 0.0313rem solid;
   @include mobile {
     width: 70%;
   }
   @include tablet {
-    padding-bottom: 7.8rem;
   }
   @include desktop {
     width: 55%;
@@ -180,8 +186,12 @@
       font-size: 3rem;
       margin-bottom: 3rem;
     }
+    @include tablet-landscape {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
     @include desktop {
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
   &__body {
@@ -190,8 +200,12 @@
       font-size: 1.5rem;
       margin: 2.5rem;
     }
+    @include tablet-landscape {
+      font-size: 1rem;
+      margin: 01.5rem;
+    }
     @include desktop {
-      font-size: 3rem;
+      font-size: 2rem;
       margin: 4rem;
     }
   }
@@ -199,7 +213,7 @@
     background-color: $primary-white;
     border: $light-green 0.0625rem solid;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.75rem;
+    border-radius: 4rem;
     color: black;
     display: inline-block;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(30, 255, 0, 0.039),
@@ -208,9 +222,10 @@
     @include tablet {
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
+      margin-bottom: 0;
     }
     @include desktop {
-      font-size: 4rem;
+      font-size: 2rem;
       padding: 1.5rem 3rem;
       border-width: 0.1875rem;
     }
@@ -226,6 +241,13 @@
     @include tablet {
       justify-content: space-around;
     }
+    @include tablet-landscape {
+      position: relative;
+      top: -5rem;
+    }
+    @include desktop {
+      position: static;
+    }
   }
   &__text {
     font-size: 1rem;
@@ -235,23 +257,43 @@
     @include tablet {
       font-size: 3rem;
     }
+    @include tablet-landscape {
+      font-size: 2.5rem;
+    }
     @include desktop {
       font-size: 5rem;
     }
   }
   &__image {
     width: 8.125rem;
+    animation: moveUpDown 2s ease-in-out;
     @include mobile {
       width: 12.5rem;
     }
     @include tablet {
-      width: 15rem;
+      width: 18rem;
+    }
+    @include tablet-landscape {
+      width: 14rem;
     }
     @include desktop {
-      width: 20rem;
-    }
-    @include desktop-big {
       width: 25rem;
     }
+    @include desktop-big {
+      width: 20rem;
+    }
+  }
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(62.5rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0.125rem);
   }
 }

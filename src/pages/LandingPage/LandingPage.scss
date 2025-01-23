@@ -64,6 +64,19 @@ body {
     border-radius: 4rem;
     padding: 0.5rem 1rem;
     margin: 2.5rem 0;
+    @include mobile {
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      font-size: 2rem;
+      margin-top: rem;
+    }
+    @include desktop {
+      font-size: 3.5rem;
+      padding: 2rem 4rem;
+      border-radius: 10rem;
+      margin-top: 20rem;
+    }
   }
 
   &__intro-container {

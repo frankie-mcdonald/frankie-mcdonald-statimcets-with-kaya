@@ -24,11 +24,14 @@
       margin: 0 0 2rem 0;
       font-size: 2rem;
     }
+    @include tablet-landscape {
+      font-size: 1rem;
+      padding: 0.5rem 2rem;
+    }
     @include desktop {
-      font-size: 3rem;
+      font-size: 2rem;
       padding: 0.75rem 4rem;
       border-radius: 2.5rem;
-      margin: 3rem;
     }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
@@ -44,7 +47,7 @@
     }
     @include desktop {
       font-size: 2rem;
-      margin: 1rem;
+      // margin: 1rem;
     }
   }
 }

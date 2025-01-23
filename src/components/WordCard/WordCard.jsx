@@ -42,8 +42,9 @@ function WordCard() {
   };
   return (
     <section className="random-card">
+      <h3 className="word-card__text">Click to generate new Word and phrase</h3>
       <h1 className="word-card__next" onClick={nextWord}>
-        Click here to genrate new word and phrase!
+        Click here!
       </h1>
       <div className="word-card">
         <h1 className="word-card__heading">Random word!</h1>

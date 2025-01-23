@@ -5,6 +5,10 @@
   text-align: center;
   background-color: #dce6dd;
   padding-bottom: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include mobile {
     padding: 2rem 1rem 30rem 1rem;
   }
