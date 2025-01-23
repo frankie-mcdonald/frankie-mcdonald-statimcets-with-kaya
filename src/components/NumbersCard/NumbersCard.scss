@@ -12,6 +12,12 @@
   &__div {
     @include flex-box($flex-direction: column, $align-items: center);
     cursor: pointer;
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
   }
   &__title {
     font-size: 2rem;

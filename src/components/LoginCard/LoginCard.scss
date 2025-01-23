@@ -1,0 +1,90 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form {
+  background-color: #bdccba;
+  border-radius: 1.6rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  color: $dark-forest-green;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+  border: $green 5px solid;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(255, 255, 255, 0.039),
+    0.1rem 0.1rem 0.1rem 0.1rem rgba(214, 255, 229, 0.2);
+  &__input-section {
+    width: 90%;
+    @include flex-center(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start
+    );
+  }
+  &__label {
+    font-family: "nunito";
+    font-weight: 600;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+  &__input {
+    margin: 0.5rem 0;
+    border: $dark-forest-green 1.5px solid;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.4rem;
+    width: 100%;
+    @include tablet {
+      font-size: 1rem;
+    }
+    &:active {
+      border: $green 3px solid;
+    }
+  }
+  &__body {
+    margin: 0.25rem;
+    color: $dark-forest-green;
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    @include glow-button;
+    border-radius: 1.875rem;
+    background-color: $green;
+    color: $primary-white;
+    text-align: center;
+    margin-top: 0.55rem;
+    border: $dark-forest-green 1px solid;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
+      0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 20, 7, 0.2);
+    font-family: "nunito", "sanserif";
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem;
+    }
+    &:hover {
+      background-color: $light-green;
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
+  }
+  &__text {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    font-size: 0.75rem;
+    color: $dark-forest-green;
+    @include tablet {
+      font-size: 1rem;
+      margin: 0.75rem;
+    }
+  }
+}

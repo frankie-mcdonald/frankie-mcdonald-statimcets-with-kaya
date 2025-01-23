@@ -116,6 +116,10 @@
       font-size: 3rem;
       padding: 1rem 3rem;
     }
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+      background-color: green;
+    }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
     }

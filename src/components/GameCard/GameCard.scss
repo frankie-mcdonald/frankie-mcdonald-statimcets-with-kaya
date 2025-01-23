@@ -140,6 +140,9 @@
       width: 40rem;
       font-size: 4rem;
     }
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
     }

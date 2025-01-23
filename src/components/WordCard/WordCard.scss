@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
 .random-card {
   display: flex;
   flex-direction: column;
@@ -60,6 +61,13 @@
       font-size: 2.8rem;
       margin: 3rem 0;
     }
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+      background-color: green;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
   }
   &__heading {
     font-size: 1.5rem;
@@ -80,6 +88,13 @@
     }
   }
   &__button {
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+      background-color: green;
+    }
+    &:active {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
     @include glow-button;
     font-family: "Bcsans", "sans-serif";
     display: flex;
@@ -111,12 +126,6 @@
     @include desktop-big {
       font-size: 3.5rem;
       margin: 2rem 0;
-    }
-    &:hover {
-      transform: translateY(0.1875rem) translateX(0.1875rem);
-    }
-    &:active {
-      transform: translateY(0.1875rem) translateX(0.1875rem);
     }
   }
   &__body {

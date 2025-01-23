@@ -1,0 +1,12 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.dashboard {
+  background: linear-gradient(rgb(3, 3, 3, 0.5), rgba(32, 32, 32, 0.1)),
+    url("../../assets/images/underwater.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+  padding: 3rem;
+  background-repeat: repeat-y;
+}
