@@ -4,6 +4,7 @@ import NumbersPage from "./pages/NumbersPage/NumbersPage";
 import MainPage from "./pages/MainPage/MainPage";
 import LessonsPage from "./pages/LessonsPage/LessonsPage";
 import AlphabetPage from "./pages/AlphabetPage/AlphabetPage";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/numbers" element={<NumbersPage />} />
           <Route path="/lessons" element={<LessonsPage />} />{" "}
           <Route path="/alphabet" element={<AlphabetPage />} />
