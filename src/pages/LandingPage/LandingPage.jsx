@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Kaya from "../../assets/images/kaya.png";
 import "./LandingPage.scss";
+import volume from "../../assets/icons/volume.png";
 
 function LandingPage() {
   const frames = import.meta.glob(
