@@ -6,6 +6,12 @@ function DashboardCard() {
     <section className="dashboardcard">
       <ul className="dashboardcard__list">
         <h1 className="dashboardcard__title"> Dashboard</h1>
+        <NavLink to="/alphabet" className="dashboardcard__link">
+          <li className="dashboardcard__items">
+            Alphabet
+            <button className="dashboardcard__button">Quiz</button>
+          </li>
+        </NavLink>
         <NavLink to="/numbers" className="dashboardcard__link">
           <li className="dashboardcard__items">
             Numbers{" "}

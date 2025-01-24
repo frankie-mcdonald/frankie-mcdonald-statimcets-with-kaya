@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Kaya from "../../assets/images/kaya.png";
 import "./LandingPage.scss";
-import volume from "../../assets/icons/volume.png";
+// import volume from "../../assets/icons/volume.png";
+import kayaAudio from "../../assets/audio/Kaya-intro.mp3";
 
 function LandingPage() {
   const frames = import.meta.glob(
@@ -17,6 +18,13 @@ function LandingPage() {
 
   const maxPlays = 3;
 
+  const audioRef = useRef(new Audio(kayaAudio));
+
+  const handlePlayAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setFrameIndex((prevIndex) => {
@@ -57,7 +65,13 @@ function LandingPage() {
           <p className="landing__text">
             <span></span>
           </p>
-          <img className="landing__image" src={Kaya} alt="Kaya Waving" />
+          {/* <p className="landing__text-special">Click Kaya</p> */}
+          <img
+            className="landing__image"
+            src={Kaya}
+            alt="Kaya Waving"
+            // onClick={handlePlayAudio}
+          />
         </div>
 
         <p className="landing__body">

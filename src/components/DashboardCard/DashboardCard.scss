@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .dashboardcard {
-  width: 100%;
+  width: 85%;
   &__list {
     color: $primary-white;
     display: flex;
@@ -51,7 +51,7 @@
     border: $dark-forest-green solid 1px;
     box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 20, 7, 0.2);
-    background-color: yellowgreen;
+    background-color: rgb(68, 82, 39);
     &-special {
       border: green solid 2px;
       background-color: green;

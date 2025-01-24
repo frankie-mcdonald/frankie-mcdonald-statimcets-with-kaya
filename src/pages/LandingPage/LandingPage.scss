@@ -105,6 +105,9 @@ body {
       right: 0.5rem;
     }
   }
+  &__text-special {
+    margin-top: 1.3rem;
+  }
   &__image {
     width: 12.5rem;
     animation: moveUpDown 2s ease-in-out;

@@ -38,7 +38,11 @@
     font-size: 2rem;
     padding: 1.5rem 0;
     text-align: center;
-    background-image: url("../../assets/images/nahani-bg.jpg");
+    background-image: linear-gradient(
+        rgba(3, 3, 3, 0.303),
+        rgba(0, 0, 0, 0.421)
+      ),
+      url("../../assets/images/nahani-bg.jpg");
     background-position: center;
     background-size: cover;
     color: white;
