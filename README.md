@@ -12,8 +12,9 @@ St'at'imcets with Kaya is an interactive web app designed to teach children the 
 
 ## Screenshots
 
-![Numbers Page](./src/assets/images/numbers.png)
 ![Landing Page](./src/assets/images/landing-page.png)
+
+![Numbers Page](./src/assets/images/numbers.png)
 
 [View Demo](https://youtu.be/ZaN7_mWEFGY)
 
