@@ -16,10 +16,13 @@ function NavBar() {
       <NavLink to="/lessons">
         <img className="navbar__icon" src={lessonsIcon} alt="Lessons icon" />
       </NavLink>
-      <div className="navbar__login">
-        <p className="navbar__body">Login</p>
-        <KayaLogo />
-      </div>
+      <NavLink to="/dashboard">
+        {" "}
+        <div className="navbar__login">
+          <p className="navbar__body">Login</p>
+          <KayaLogo />
+        </div>
+      </NavLink>
     </nav>
   );
 }

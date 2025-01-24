@@ -2,13 +2,21 @@
 @use "../../styles/partials/mixins" as *;
 
 .alphabet {
+  background: linear-gradient(rgba(0, 0, 0, 0.412), rgba(32, 32, 32, 0.125)),
+    url("../../assets/images/underwater.jpg");
+  background-position: center;
+  background-size: center;
+  background-repeat: no-repeat;
+  height: 66rem;
+  width: 100%;
+  color: $primary-white;
   text-align: center;
-  background-color: #dce6dd;
   padding-bottom: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @include mobile {
     padding: 2rem 1rem 30rem 1rem;
   }
@@ -30,7 +38,11 @@
     font-size: 2rem;
     padding: 1.5rem 0;
     text-align: center;
-    background-image: url("../../assets/images/nahani-bg.jpg");
+    background-image: linear-gradient(
+        rgba(3, 3, 3, 0.303),
+        rgba(0, 0, 0, 0.421)
+      ),
+      url("../../assets/images/nahani-bg.jpg");
     background-position: center;
     background-size: cover;
     color: white;
@@ -71,11 +83,12 @@
     background-color: $primary-white;
     border: #35270c solid 0.0625rem;
     border-radius: 0.3125rem;
-    box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem rgba(0, 0, 255, 0.039),
-      0.1rem 0.1rem 0.1rem 0.1rem rgba(93, 68, 18, 0.2);
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(4, 61, 44, 0.687),
+      0.31rem 0.31rem 0.31rem 0.31rem rgb(0, 0, 0);
     align-content: center;
     margin: 0.25rem;
     font-size: 1rem;
+    color: $dark-forest-green;
     width: 1.5625rem;
     height: 1.5625rem;
     @include mobile {

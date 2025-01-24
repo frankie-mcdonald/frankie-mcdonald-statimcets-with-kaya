@@ -140,6 +140,9 @@
       width: 40rem;
       font-size: 4rem;
     }
+    &:hover {
+      transform: translateY(0.1875rem) translateX(0.1875rem);
+    }
     &:active {
       transform: translateY(0.1875rem) translateX(0.1875rem);
     }
@@ -251,6 +254,9 @@
   }
   &__text {
     font-size: 1rem;
+    @include animated-outline;
+    border-radius: 3.125rem;
+
     @include mobile {
       font-size: 1.5rem;
     }

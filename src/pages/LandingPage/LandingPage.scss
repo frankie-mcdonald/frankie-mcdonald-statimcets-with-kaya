@@ -62,8 +62,9 @@ body {
     border: $green 2px solid;
     background-color: $green;
     border-radius: 4rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     margin: 2.5rem 0;
+    font-family: "nunito";
     @include mobile {
       font-size: 1.5rem;
     }
@@ -103,6 +104,9 @@ body {
       width: calc(100% + 8px);
       right: 0.5rem;
     }
+  }
+  &__text-special {
+    margin-top: 1.3rem;
   }
   &__image {
     width: 12.5rem;
