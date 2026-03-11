@@ -20,12 +20,15 @@ function DashboardCard() {
             </button>
           </li>
         </NavLink>
-        <li className="dashboardcard__items">
-          Animals
-          <button className="dashboardcard__button dashboardcard__button-special">
-            Passed
-          </button>
-        </li>
+        <NavLink to="/animals" className="dashboardcard__link">
+          <li className="dashboardcard__items">
+            Animals
+            <button className="dashboardcard__button dashboardcard__button-special">
+              Passed
+            </button>
+          </li>
+        </NavLink>
+
         <li className="dashboardcard__items">
           Introduction<button className="dashboardcard__button">Quiz</button>
         </li>

@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 function Directory() {
   return (
     <div className="directory">
-      <NavLink to="/lessons">
-        <button className="directory__button">Lessons</button>
+      <NavLink to="/dashboard">
+        <button className="directory__button">Dashboard</button>
       </NavLink>
       <NavLink to="/numbers">
         <button className="directory__button">Numbers</button>

@@ -1,18 +1,17 @@
-import DashboardCard from "../../components/DashboardCard/DashboardCard";
 import Header from "../../components/Header/Header";
 import LoginCard from "../../components/LoginCard/LoginCard";
 import NavBar from "../../components/NavBar/NavBar";
-import "./DashboardPage.scss";
-import { useState } from "react";
+import "./LoginPage.scss";
+// import { useState } from "react";
 
-function DashboardPage() {
+function LoginPage() {
   return (
     <>
       <Header />
-      <DashboardCard />
+      <LoginCard />
       <NavBar />
     </>
   );
 }
 
-export default DashboardPage;
+export default LoginPage;

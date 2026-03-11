@@ -13,10 +13,10 @@ function NavBar() {
       <NavLink to="/numbers">
         <img className="navbar__icon" src={numberIcon} alt="Numbers icon" />
       </NavLink>
-      <NavLink to="/lessons">
+      <NavLink to="/dashboard">
         <img className="navbar__icon" src={lessonsIcon} alt="Lessons icon" />
       </NavLink>
-      <NavLink to="/dashboard">
+      <NavLink to="/login">
         {" "}
         <div className="navbar__login">
           <p className="navbar__body">Login</p>
