@@ -7,7 +7,7 @@
     $align-items: center,
     $justify-content: center
   );
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(90, 83, 53);
   color: $primary-white;
   padding-bottom: 10rem;
   @include tablet {
@@ -18,9 +18,9 @@
   }
   &__hero {
     border-bottom: $dark-turquoise 0.125rem solid;
-    background-image:
-      linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
-      url("../../assets/images/underwater.jpg");
+    // background-image:
+    //   linear-gradient(rgba(7, 7, 7, 0.8), rgba(20, 18, 18, 0.2)),
+    //   url("../../assets/images/underwater.jpg");
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -64,9 +64,9 @@
     font-size: 2rem;
     background-position: center;
     background-size: cover;
-    background-image:
-      linear-gradient(rgba(58, 53, 53, 0.2), rgba(41, 34, 34, 0.1)),
-      url("../../assets/images/into_the_water.jpg");
+    // background-image:
+    //   linear-gradient(rgba(58, 53, 53, 0.2), rgba(41, 34, 34, 0.1)),
+    //   url("../../assets/images/into_the_water.jpg");
     width: 100vw;
     text-align: center;
     color: $primary-white;

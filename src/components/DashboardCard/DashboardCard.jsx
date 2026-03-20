@@ -7,49 +7,22 @@ function DashboardCard() {
       <ul className="dashboardcard__list">
         <h1 className="dashboardcard__title"> Dashboard</h1>
         <NavLink to="/alphabet" className="dashboardcard__link">
-          <li className="dashboardcard__items">
-            Alphabet
-            <button className="dashboardcard__button">Quiz</button>
-          </li>
+          <li className="dashboardcard__items">Alphabet</li>
         </NavLink>
         <NavLink to="/numbers" className="dashboardcard__link">
-          <li className="dashboardcard__items">
-            Numbers{" "}
-            <button className="dashboardcard__button dashboardcard__button-special">
-              Passed
-            </button>
-          </li>
+          <li className="dashboardcard__items">Numbers</li>
         </NavLink>
         <NavLink to="/animals" className="dashboardcard__link">
-          <li className="dashboardcard__items">
-            Animals
-            <button className="dashboardcard__button dashboardcard__button-special">
-              Passed
-            </button>
-          </li>
+          <li className="dashboardcard__items">Animals</li>
         </NavLink>
 
-        <li className="dashboardcard__items">
-          Introduction<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Colors<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Months<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Weekdays<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Common phrases<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Family members<button className="dashboardcard__button">Quiz</button>
-        </li>
-        <li className="dashboardcard__items">
-          Body Parts<button className="dashboardcard__button">Quiz</button>
-        </li>
+        <li className="dashboardcard__items">Introduction</li>
+        <li className="dashboardcard__items">Colors</li>
+        <li className="dashboardcard__items">Months</li>
+        <li className="dashboardcard__items">Weekdays</li>
+        <li className="dashboardcard__items">Common phrases</li>
+        <li className="dashboardcard__items">Family members</li>
+        <li className="dashboardcard__items">Body Parts</li>
       </ul>
     </section>
   );

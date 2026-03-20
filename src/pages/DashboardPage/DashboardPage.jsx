@@ -7,11 +7,11 @@ import { useState } from "react";
 
 function DashboardPage() {
   return (
-    <>
+    <section className="dashboard">
       <Header />
       <DashboardCard />
       <NavBar />
-    </>
+    </section>
   );
 }
 

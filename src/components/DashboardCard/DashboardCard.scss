@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .dashboardcard {
-  width: 85%;
+  width: 55%;
   &__list {
     color: $primary-white;
     display: flex;
@@ -14,7 +14,7 @@
     font-family: "nunito";
     font-size: 4rem;
     font-weight: 900;
-    border-bottom: 1px $primary-white solid;
+    border-bottom: 3px $primary-white solid;
   }
   &__link {
     width: 100%;
@@ -24,13 +24,15 @@
     @include reset;
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
-    padding: 0.75rem 3rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 3rem;
     font-family: "nunito";
     font-weight: 900;
-    font-size: 2rem;
-    width: 100%;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
+    font-size: 1.5rem;
+    width: 120%;
+    border-radius: 2.5rem;
+    box-shadow:
+      1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 20, 7, 0.2);
     &:hover {
       background-color: $light-green;
@@ -49,7 +51,8 @@
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border: $dark-forest-green solid 1px;
-    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
+    box-shadow:
+      1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.039),
       0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 20, 7, 0.2);
     background-color: rgb(68, 82, 39);
     &-special {
